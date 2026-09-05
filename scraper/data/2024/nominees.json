@@ -1,0 +1,1325 @@
+{
+  "year": 2024,
+  "title": "The Game Awards 2024",
+  "status": "concluded",
+  "last_updated": "2026-09-05T16:51:16.158666+00:00",
+  "categories_count": 32,
+  "categories": [
+    {
+      "id": "jogo-do-ano",
+      "title": "Jogo do Ano",
+      "nominees": [
+        {
+          "id": "astro-bot",
+          "name": "Astro Bot",
+          "details": "Team Asobi / Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "balatro",
+          "name": "Balatro",
+          "details": "LocalThunk / Playstack",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "black-myth-wukong",
+          "name": "Black Myth: Wukong",
+          "details": "Game Science",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "elden-ring-shadow-of-the-erdtree",
+          "name": "Elden Ring: Shadow of the Erdtree",
+          "details": "FromSoftware / Bandai Namco Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-rebirth",
+          "name": "Final Fantasy VII Rebirth",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "metaphor-refantazio",
+          "name": "Metaphor: ReFantazio",
+          "details": "Studio Zero / Sega",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "astro-bot"
+    },
+    {
+      "id": "melhor-direcao-de-jogo",
+      "title": "Melhor Direção de Jogo",
+      "nominees": [
+        {
+          "id": "astro-bot",
+          "name": "Astro Bot",
+          "details": "Team Asobi / Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "balatro",
+          "name": "Balatro",
+          "details": "LocalThunk / Playstack",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "black-myth-wukong",
+          "name": "Black Myth: Wukong",
+          "details": "Game Science",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "elden-ring-shadow-of-the-erdtree",
+          "name": "Elden Ring: Shadow of the Erdtree",
+          "details": "FromSoftware / Bandai Namco Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-rebirth",
+          "name": "Final Fantasy VII Rebirth",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "metaphor-refantazio",
+          "name": "Metaphor: ReFantazio",
+          "details": "Studio Zero / Sega",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "astro-bot"
+    },
+    {
+      "id": "melhor-narrativa",
+      "title": "Melhor Narrativa",
+      "nominees": [
+        {
+          "id": "metaphor-refantazio",
+          "name": "Metaphor: ReFantazio",
+          "details": "Studio Zero / Sega",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-rebirth",
+          "name": "Final Fantasy VII Rebirth",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "like-a-dragon-infinite-wealth",
+          "name": "Like a Dragon: Infinite Wealth",
+          "details": "Ryu Ga Gotoku Studio / Sega",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "senua-s-saga-hellblade-ii",
+          "name": "Senua's Saga: Hellblade II",
+          "details": "Ninja Theory / Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "silent-hill-2",
+          "name": "Silent Hill 2",
+          "details": "Bloober Team / Konami",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "metaphor-refantazio"
+    },
+    {
+      "id": "melhor-direcao-de-arte",
+      "title": "Melhor Direção de Arte",
+      "nominees": [
+        {
+          "id": "metaphor-refantazio",
+          "name": "Metaphor: ReFantazio",
+          "details": "Studio Zero / Sega",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "astro-bot",
+          "name": "Astro Bot",
+          "details": "Team Asobi / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "black-myth-wukong",
+          "name": "Black Myth: Wukong",
+          "details": "Game Science",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "elden-ring-shadow-of-the-erdtree",
+          "name": "Elden Ring: Shadow of the Erdtree",
+          "details": "FromSoftware / Bandai Namco Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "neva",
+          "name": "Neva",
+          "details": "Nomada Studio / Devolver Digital",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "metaphor-refantazio"
+    },
+    {
+      "id": "melhor-trilha-sonora",
+      "title": "Melhor Trilha Sonora",
+      "nominees": [
+        {
+          "id": "final-fantasy-vii-rebirth",
+          "name": "Final Fantasy VII Rebirth",
+          "details": "Square Enix",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "astro-bot",
+          "name": "Astro Bot",
+          "details": "Team Asobi / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "metaphor-refantazio",
+          "name": "Metaphor: ReFantazio",
+          "details": "Studio Zero / Sega",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "silent-hill-2",
+          "name": "Silent Hill 2",
+          "details": "Bloober Team / Konami",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "stellar-blade",
+          "name": "Stellar Blade",
+          "details": "Shift Up / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "final-fantasy-vii-rebirth"
+    },
+    {
+      "id": "melhor-design-de-audio",
+      "title": "Melhor Design de Áudio",
+      "nominees": [
+        {
+          "id": "senua-s-saga-hellblade-ii",
+          "name": "Senua's Saga: Hellblade II",
+          "details": "Ninja Theory / Xbox Game Studios",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "astro-bot",
+          "name": "Astro Bot",
+          "details": "Team Asobi / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-black-ops-6",
+          "name": "Call of Duty: Black Ops 6",
+          "details": "Treyarch, Raven Software / Activision",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-rebirth",
+          "name": "Final Fantasy VII Rebirth",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "silent-hill-2",
+          "name": "Silent Hill 2",
+          "details": "Bloober Team / Konami",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "senua-s-saga-hellblade-ii"
+    },
+    {
+      "id": "melhor-performance",
+      "title": "Melhor Performance",
+      "nominees": [
+        {
+          "id": "melina-juergens-como-senua",
+          "name": "Melina Juergens como Senua",
+          "details": "Senua's Saga: Hellblade II",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "briana-white-como-aerith-gainsborough",
+          "name": "Briana White como Aerith Gainsborough",
+          "details": "Final Fantasy VII Rebirth",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hannah-telle-como-max-caulfield",
+          "name": "Hannah Telle como Max Caulfield",
+          "details": "Life Is Strange: Double Exposure",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "humberly-gonzalez-como-kay-vess",
+          "name": "Humberly González como Kay Vess",
+          "details": "Star Wars Outlaws",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "luke-roberts-como-james-sunderland",
+          "name": "Luke Roberts como James Sunderland",
+          "details": "Silent Hill 2",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "melina-juergens-como-senua"
+    },
+    {
+      "id": "jogo-mais-impactante",
+      "title": "Jogo Mais Impactante",
+      "nominees": [
+        {
+          "id": "neva",
+          "name": "Neva",
+          "details": "Nomada Studio / Devolver Digital",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "closer-the-distance",
+          "name": "Closer the Distance",
+          "details": "Osmotic Studios / Skybound Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "indika",
+          "name": "Indika",
+          "details": "Odd Meter / 11 Bit Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "life-is-strange-double-exposure",
+          "name": "Life Is Strange: Double Exposure",
+          "details": "Deck Nine / Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "senua-s-saga-hellblade-ii",
+          "name": "Senua's Saga: Hellblade II",
+          "details": "Ninja Theory / Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "tales-of-kenzera-zau",
+          "name": "Tales of Kenzera: Zau",
+          "details": "Surgent Studios / Electronic Arts",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "neva"
+    },
+    {
+      "id": "melhor-jogo-independente",
+      "title": "Melhor Jogo Independente",
+      "nominees": [
+        {
+          "id": "balatro",
+          "name": "Balatro",
+          "details": "LocalThunk / Playstack",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "animal-well",
+          "name": "Animal Well",
+          "details": "Shared Memory / Bigmode",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "lorelei-and-the-laser-eyes",
+          "name": "Lorelei and the Laser Eyes",
+          "details": "Simogo / Annapurna Interactive",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "neva",
+          "name": "Neva",
+          "details": "Nomada Studio / Devolver Digital",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ufo-50",
+          "name": "UFO 50",
+          "details": "Mossmouth",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "balatro"
+    },
+    {
+      "id": "melhor-estreia-independente",
+      "title": "Melhor Estreia Independente",
+      "nominees": [
+        {
+          "id": "balatro",
+          "name": "Balatro",
+          "details": "LocalThunk / Playstack",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "animal-well",
+          "name": "Animal Well",
+          "details": "Shared Memory / Bigmode",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "manor-lords",
+          "name": "Manor Lords",
+          "details": "Slavic Magic / Hooded Horse",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "pacific-drive",
+          "name": "Pacific Drive",
+          "details": "Ironwood Studios / Kepler Interactive",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-plucky-squire",
+          "name": "The Plucky Squire",
+          "details": "All Possible Futures / Devolver Digital",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "balatro"
+    },
+    {
+      "id": "melhor-jogo-continuo",
+      "title": "Melhor Jogo Contínuo",
+      "nominees": [
+        {
+          "id": "helldivers-2",
+          "name": "Helldivers 2",
+          "details": "Arrowhead Game Studios / Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2-the-final-shape",
+          "name": "Destiny 2: The Final Shape",
+          "details": "Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "diablo-iv-vessel-of-hatred",
+          "name": "Diablo IV: Vessel of Hatred",
+          "details": "Blizzard Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-xiv-dawntrail",
+          "name": "Final Fantasy XIV: Dawntrail",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fortnite",
+          "name": "Fortnite",
+          "details": "Epic Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "helldivers-2"
+    },
+    {
+      "id": "melhor-suporte-a-comunidade",
+      "title": "Melhor Suporte à Comunidade",
+      "nominees": [
+        {
+          "id": "baldur-s-gate-3",
+          "name": "Baldur's Gate 3",
+          "details": "Larian Studios",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-xiv-dawntrail",
+          "name": "Final Fantasy XIV: Dawntrail",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fortnite",
+          "name": "Fortnite",
+          "details": "Epic Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "helldivers-2",
+          "name": "Helldivers 2",
+          "details": "Arrowhead Game Studios / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "no-man-s-sky",
+          "name": "No Man's Sky",
+          "details": "Hello Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "baldur-s-gate-3"
+    },
+    {
+      "id": "melhor-jogo-mobile",
+      "title": "Melhor Jogo Mobile",
+      "nominees": [
+        {
+          "id": "balatro",
+          "name": "Balatro",
+          "details": "LocalThunk / Playstack",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "afk-journey",
+          "name": "AFK Journey",
+          "details": "Lilith Games / Farlight",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "pokemon-trading-card-game-pocket",
+          "name": "Pokémon Trading Card Game Pocket",
+          "details": "Creatures Inc., DeNA / The Pokémon Company",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "wuthering-waves",
+          "name": "Wuthering Waves",
+          "details": "Kuro Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "zenless-zone-zero",
+          "name": "Zenless Zone Zero",
+          "details": "miHoYo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "balatro"
+    },
+    {
+      "id": "melhor-jogo-de-vr-ar",
+      "title": "Melhor Jogo de VR/AR",
+      "nominees": [
+        {
+          "id": "batman-arkham-shadow",
+          "name": "Batman: Arkham Shadow",
+          "details": "Camouflaj / Oculus Studios",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "arizona-sunshine-remake",
+          "name": "Arizona Sunshine Remake",
+          "details": "Vertigo Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "asgard-s-wrath-2",
+          "name": "Asgard's Wrath 2",
+          "details": "Sanzaru Games / Oculus Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "metal-hellsinger-vr",
+          "name": "Metal: Hellsinger VR",
+          "details": "Lab42, The Outsiders / Funcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "metro-awakening",
+          "name": "Metro Awakening",
+          "details": "Vertigo Games / Deep Silver",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "batman-arkham-shadow"
+    },
+    {
+      "id": "melhor-jogo-de-acao",
+      "title": "Melhor Jogo de Ação",
+      "nominees": [
+        {
+          "id": "black-myth-wukong",
+          "name": "Black Myth: Wukong",
+          "details": "Game Science",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-black-ops-6",
+          "name": "Call of Duty: Black Ops 6",
+          "details": "Treyarch, Raven Software / Activision",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "helldivers-2",
+          "name": "Helldivers 2",
+          "details": "Arrowhead Game Studios / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "stellar-blade",
+          "name": "Stellar Blade",
+          "details": "Shift Up / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "warhammer-40-000-space-marine-2",
+          "name": "Warhammer 40,000: Space Marine 2",
+          "details": "Saber Interactive / Focus Entertainment",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "black-myth-wukong"
+    },
+    {
+      "id": "melhor-jogo-de-acao-aventura",
+      "title": "Melhor Jogo de Ação-aventura",
+      "nominees": [
+        {
+          "id": "astro-bot",
+          "name": "Astro Bot",
+          "details": "Team Asobi / Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "the-legend-of-zelda-echoes-of-wisdom",
+          "name": "The Legend of Zelda: Echoes of Wisdom",
+          "details": "Nintendo EPD, Grezzo / Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "prince-of-persia-the-lost-crown",
+          "name": "Prince of Persia: The Lost Crown",
+          "details": "Ubisoft Montpellier / Ubisoft",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "silent-hill-2",
+          "name": "Silent Hill 2",
+          "details": "Bloober Team / Konami",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "star-wars-outlaws",
+          "name": "Star Wars Outlaws",
+          "details": "Massive Entertainment / Ubisoft",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "astro-bot"
+    },
+    {
+      "id": "melhor-jogo-de-rpg",
+      "title": "Melhor Jogo de RPG",
+      "nominees": [
+        {
+          "id": "metaphor-refantazio",
+          "name": "Metaphor: ReFantazio",
+          "details": "Studio Zero / Sega",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "dragon-s-dogma-2",
+          "name": "Dragon's Dogma 2",
+          "details": "Capcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "elden-ring-shadow-of-the-erdtree",
+          "name": "Elden Ring: Shadow of the Erdtree",
+          "details": "FromSoftware / Bandai Namco Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-rebirth",
+          "name": "Final Fantasy VII Rebirth",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "like-a-dragon-infinite-wealth",
+          "name": "Like a Dragon: Infinite Wealth",
+          "details": "Ryu Ga Gotoku Studio / Sega",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "metaphor-refantazio"
+    },
+    {
+      "id": "melhor-jogo-de-luta",
+      "title": "Melhor Jogo de Luta",
+      "nominees": [
+        {
+          "id": "tekken-8",
+          "name": "Tekken 8",
+          "details": "Bandai Namco Studios, Arika / Bandai Namco Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "dragon-ball-sparking-zero",
+          "name": "Dragon Ball: Sparking! Zero",
+          "details": "Spike Chunsoft / Bandai Namco Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "granblue-fantasy-versus-rising",
+          "name": "Granblue Fantasy Versus: Rising",
+          "details": "Arc System Works / Cygames",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "marvel-vs-capcom-fighting-collection-arcade-classics",
+          "name": "Marvel vs. Capcom Fighting Collection: Arcade Classics",
+          "details": "Capcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "multiversus",
+          "name": "MultiVersus",
+          "details": "Player First Games / Warner Bros. Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "tekken-8"
+    },
+    {
+      "id": "melhor-jogo-para-familia",
+      "title": "Melhor Jogo para Família",
+      "nominees": [
+        {
+          "id": "astro-bot",
+          "name": "Astro Bot",
+          "details": "Team Asobi / Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "the-legend-of-zelda-echoes-of-wisdom",
+          "name": "The Legend of Zelda: Echoes of Wisdom",
+          "details": "Nintendo EPD, Grezzo / Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-plucky-squire",
+          "name": "The Plucky Squire",
+          "details": "All Possible Futures / Devolver Digital",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "princess-peach-showtime",
+          "name": "Princess Peach: Showtime!",
+          "details": "Good-Feel / Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-mario-party-jamboree",
+          "name": "Super Mario Party Jamboree",
+          "details": "Nintendo Cube / Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "astro-bot"
+    },
+    {
+      "id": "melhor-jogo-de-simulacao-estrategia",
+      "title": "Melhor Jogo de Simulação/Estratégia",
+      "nominees": [
+        {
+          "id": "frostpunk-2",
+          "name": "Frostpunk 2",
+          "details": "11 Bit Studios",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "age-of-mythology-retold",
+          "name": "Age of Mythology: Retold",
+          "details": "World's Edge, Forgotten Empires / Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "kunitsu-gami-path-of-the-goddess",
+          "name": "Kunitsu-Gami: Path of the Goddess",
+          "details": "Capcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "manor-lords",
+          "name": "Manor Lords",
+          "details": "Slavic Magic / Hooded Horse",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "unicorn-overlord",
+          "name": "Unicorn Overlord",
+          "details": "Vanillaware / Sega",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "frostpunk-2"
+    },
+    {
+      "id": "melhor-jogo-de-esporte-corrida",
+      "title": "Melhor Jogo de Esporte/Corrida",
+      "nominees": [
+        {
+          "id": "ea-sports-fc-25",
+          "name": "EA Sports FC 25",
+          "details": "EA Vancouver, EA Romania / EA Sports",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "f1-24",
+          "name": "F1 24",
+          "details": "Codemasters / EA Sports",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nba-2k25",
+          "name": "NBA 2K25",
+          "details": "Visual Concepts / 2K",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "topspin-2k25",
+          "name": "TopSpin 2K25",
+          "details": "Hangar 13 / 2K",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "wwe-2k24",
+          "name": "WWE 2K24",
+          "details": "Visual Concepts / 2K",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "ea-sports-fc-25"
+    },
+    {
+      "id": "melhor-jogo-multiplayer",
+      "title": "Melhor Jogo Multiplayer",
+      "nominees": [
+        {
+          "id": "helldivers-2",
+          "name": "Helldivers 2",
+          "details": "Arrowhead Game Studios / Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-black-ops-6",
+          "name": "Call of Duty: Black Ops 6",
+          "details": "Treyarch, Raven Software / Activision",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-mario-party-jamboree",
+          "name": "Super Mario Party Jamboree",
+          "details": "Nintendo Cube / Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "tekken-8",
+          "name": "Tekken 8",
+          "details": "Bandai Namco Studios, Arika / Bandai Namco Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "warhammer-40-000-space-marine-2",
+          "name": "Warhammer 40,000: Space Marine 2",
+          "details": "Saber Interactive / Focus Entertainment",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "helldivers-2"
+    },
+    {
+      "id": "inovacao-em-acessibilidade",
+      "title": "Inovação em Acessibilidade",
+      "nominees": [
+        {
+          "id": "prince-of-persia-the-lost-crown",
+          "name": "Prince of Persia: The Lost Crown",
+          "details": "Ubisoft Montpellier / Ubisoft",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-black-ops-6",
+          "name": "Call of Duty: Black Ops 6",
+          "details": "Treyarch, Raven Software / Activision",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "diablo-iv-vessel-of-hatred",
+          "name": "Diablo IV: Vessel of Hatred",
+          "details": "Blizzard Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "dragon-age-the-veilguard",
+          "name": "Dragon Age: The Veilguard",
+          "details": "BioWare / Electronic Arts",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "star-wars-outlaws",
+          "name": "Star Wars Outlaws",
+          "details": "Massive Entertainment / Ubisoft",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "prince-of-persia-the-lost-crown"
+    },
+    {
+      "id": "melhor-adaptacao",
+      "title": "Melhor Adaptação",
+      "nominees": [
+        {
+          "id": "fallout-serie-de-televisao",
+          "name": "Fallout (série de televisão)",
+          "details": "Kilter Films, Bethesda Game Studios / Amazon MGM Studios; baseada em Fallout da Bethesda Softworks",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "arcane-serie-animada",
+          "name": "Arcane (série animada)",
+          "details": "Fortiche, Riot Games / Netflix; baseada em League of Legends da Riot Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "knuckles-serie-de-televisao",
+          "name": "Knuckles (série de televisão)",
+          "details": "Sega Sammy Group / Paramount Pictures; baseada em Sonic the Hedgehog da Sega",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "like-a-dragon-yakuza-serie-de-televisao",
+          "name": "Like a Dragon: Yakuza (série de televisão)",
+          "details": "Sega / Amazon MGM Studios; baseada em Like a Dragon da Sega",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "tomb-raider-the-legend-of-lara-croft-serie-animada",
+          "name": "Tomb Raider: The Legend of Lara Croft (série animada)",
+          "details": "Crystal Dynamics, Legendary Television / Netflix; baseada em Tomb Raider da Crystal Dynamics",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "fallout-serie-de-televisao"
+    },
+    {
+      "id": "jogo-mais-aguardado",
+      "title": "Jogo Mais Aguardado",
+      "nominees": [
+        {
+          "id": "grand-theft-auto-vi",
+          "name": "Grand Theft Auto VI",
+          "details": "Rockstar Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "death-stranding-2-on-the-beach",
+          "name": "Death Stranding 2: On The Beach",
+          "details": "Kojima Productions / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ghost-of-yotei",
+          "name": "Ghost of Yōtei",
+          "details": "Sucker Punch Productions / Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "metroid-prime-4-beyond",
+          "name": "Metroid Prime 4: Beyond",
+          "details": "Retro Studios / Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "monster-hunter-wilds",
+          "name": "Monster Hunter Wilds",
+          "details": "Capcom",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "grand-theft-auto-vi"
+    },
+    {
+      "id": "voz-dos-jogadores",
+      "title": "Voz dos Jogadores",
+      "nominees": [
+        {
+          "id": "black-myth-wukong",
+          "name": "Black Myth: Wukong",
+          "details": "Game Science",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "genshin-impact",
+          "name": "Genshin Impact",
+          "details": "miHoYo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "elden-ring-shadow-of-the-erdtree",
+          "name": "Elden Ring: Shadow of the Erdtree",
+          "details": "FromSoftware / Bandai Namco Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "wuthering-waves",
+          "name": "Wuthering Waves",
+          "details": "Kuro Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "zenless-zone-zero",
+          "name": "Zenless Zone Zero",
+          "details": "miHoYo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "black-myth-wukong"
+    },
+    {
+      "id": "melhor-jogo-de-esports",
+      "title": "Melhor Jogo de eSports",
+      "nominees": [
+        {
+          "id": "league-of-legends",
+          "name": "League of Legends",
+          "details": "Riot Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "counter-strike-2",
+          "name": "Counter-Strike 2",
+          "details": "Valve",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "dota-2",
+          "name": "Dota 2",
+          "details": "Valve",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mobile-legends-bang-bang",
+          "name": "Mobile Legends: Bang Bang",
+          "details": "Moonton",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "valorant",
+          "name": "Valorant",
+          "details": "Riot Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "league-of-legends"
+    },
+    {
+      "id": "melhor-jogador-de-esports",
+      "title": "Melhor Jogador de eSports",
+      "nominees": [
+        {
+          "id": "lee-faker-sang-hyeok",
+          "name": "Lee \"Faker\" Sang-hyeok",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "neta-33-shapira",
+          "name": "Neta \"33\" Shapira",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "aleksi-aleksib-virolainen",
+          "name": "Aleksi \"Aleksib\" Virolainen",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "jung-chovy-ji-hoon",
+          "name": "Jung \"Chovy\" Ji-hoon",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mathieu-zywoo-herbaut",
+          "name": "Mathieu \"ZywOo\" Herbaut",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "zheng-zmjjkk-yongkang",
+          "name": "Zheng \"ZmjjKK\" Yongkang",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "lee-faker-sang-hyeok"
+    },
+    {
+      "id": "melhor-time-de-esports",
+      "title": "Melhor Time de eSports",
+      "nominees": [
+        {
+          "id": "t1-league-of-legends",
+          "name": "T1 (League of Legends)",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "bilibili-gaming-league-of-legends",
+          "name": "Bilibili Gaming (League of Legends)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "gen-g-league-of-legends",
+          "name": "Gen.G (League of Legends)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "natus-vincere-counter-strike-2",
+          "name": "Natus Vincere (Counter-Strike 2)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "team-liquid-dota-2",
+          "name": "Team Liquid (Dota 2)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "t1-league-of-legends"
+    },
+    {
+      "id": "criador-de-conteudo-do-ano",
+      "title": "Criador de Conteúdo do Ano",
+      "nominees": [
+        {
+          "id": "caseoh",
+          "name": "CaseOh",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "illojuan",
+          "name": "IlloJuan",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "techno-gamerz",
+          "name": "Techno Gamerz",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "typical-gamer",
+          "name": "Typical Gamer",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "usada-pekora",
+          "name": "Usada Pekora",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "caseoh"
+    },
+    {
+      "id": "cidadaos-globais-de-jogos",
+      "title": "Cidadãos Globais de Jogos",
+      "nominees": [
+        {
+          "id": "laura-carter-treesplease-games",
+          "name": "Laura Carter (TreesPlease Games)",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        }
+      ],
+      "winner_id": "laura-carter-treesplease-games"
+    },
+    {
+      "id": "jogos-para-mudanca",
+      "title": "Jogos Para Mudança",
+      "nominees": [
+        {
+          "id": "amir-satvat",
+          "name": "Amir Satvat",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        }
+      ],
+      "winner_id": "amir-satvat"
+    }
+  ]
+}
