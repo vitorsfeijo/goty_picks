@@ -42,16 +42,62 @@ def export_editions_manifest(
     output_dir: str = "data",
     sync_web_dir: Optional[str] = "web/public/data"
 ) -> str:
-    """Export the list of available editions to editions.json."""
+    """Export the list of available editions to editions.json, merging with existing entries."""
     os.makedirs(output_dir, exist_ok=True)
     file_path = os.path.join(output_dir, "editions.json")
 
-    data = [s.model_dump() for s in sorted(summaries, key=lambda x: x.year, reverse=True)]
+    merged: dict[int, EditionSummary] = {}
+
+    # 1. Load existing manifest if present
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                existing_data = json.load(f)
+                if isinstance(existing_data, list):
+                    for item in existing_data:
+                        try:
+                            summary = EditionSummary(**item)
+                            merged[summary.year] = summary
+                        except Exception:
+                            pass
+        except Exception as e:
+            print(f"[Exporter] Warning: could not parse existing manifest: {e}")
+
+    # 2. Discover any year directories with nominees.json on disk
+    if os.path.exists(output_dir):
+        for entry in os.listdir(output_dir):
+            year_path = os.path.join(output_dir, entry)
+            if os.path.isdir(year_path) and entry.isdigit():
+                nominees_path = os.path.join(year_path, "nominees.json")
+                year_num = int(entry)
+                if year_num not in merged and os.path.exists(nominees_path):
+                    try:
+                        with open(nominees_path, "r", encoding="utf-8") as f:
+                            data = json.load(f)
+                            has_winners = any(c.get("winner_id") is not None for c in data.get("categories", []))
+                            merged[year_num] = EditionSummary(
+                                year=year_num,
+                                title=data.get("title", f"The Game Awards {year_num}"),
+                                status=data.get("status", "concluded" if has_winners else "open"),
+                                categories_count=data.get("categories_count", len(data.get("categories", []))),
+                                has_winners=has_winners,
+                                url=f"https://pt.wikipedia.org/wiki/The_Game_Awards_{year_num}"
+                            )
+                    except Exception as e:
+                        print(f"[Exporter] Warning: could not parse {nominees_path}: {e}")
+
+    # 3. Merge new summaries (overriding existing for those specific years)
+    for s in summaries:
+        merged[s.year] = s
+
+    # Sort descending by year
+    sorted_summaries = sorted(merged.values(), key=lambda x: x.year, reverse=True)
+    data = [s.model_dump() for s in sorted_summaries]
 
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"[Exporter] Saved editions manifest ({len(summaries)} years) to {file_path}")
+    print(f"[Exporter] Saved editions manifest ({len(data)} years: {[s['year'] for s in data]}) to {file_path}")
 
     if sync_web_dir:
         os.makedirs(sync_web_dir, exist_ok=True)

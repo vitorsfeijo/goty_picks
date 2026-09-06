@@ -6,8 +6,8 @@ interface NavbarProps {
   editions: EditionSummary[];
   selectedYear: number | null;
   onSelectYear: (year: number) => void;
-  activeTab: 'ballot' | 'stats';
-  onSelectTab: (tab: 'ballot' | 'stats') => void;
+  activeTab: 'ballot' | 'stats' | 'leaderboard';
+  onSelectTab: (tab: 'ballot' | 'stats' | 'leaderboard') => void;
   totalVoted: number;
   totalCategories: number;
   status?: EditionStatus;
@@ -125,6 +125,18 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <BarChart3 className="w-4 h-4" />
             Estatísticas & Vencedores
+          </button>
+
+          <button
+            onClick={() => onSelectTab('leaderboard')}
+            className={`flex items-center gap-2 py-3 px-1 text-sm font-medium border-b-2 transition-all whitespace-nowrap ${
+              activeTab === 'leaderboard'
+                ? 'border-amber-400 text-amber-400'
+                : 'border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-700'
+            }`}
+          >
+            <Trophy className="w-4 h-4" />
+            Classificação (Leaderboard)
           </button>
         </div>
       </div>

@@ -10,6 +10,7 @@ interface NomineeItemProps {
   isOfficialWinner: boolean;
   userVotedThis: boolean;
   showWinner: boolean;
+  isVotingOpen?: boolean;
 }
 
 export const NomineeItem: React.FC<NomineeItemProps> = ({
@@ -20,9 +21,12 @@ export const NomineeItem: React.FC<NomineeItemProps> = ({
   isOfficialWinner,
   userVotedThis,
   showWinner,
+  isVotingOpen = true,
 }) => {
   // Determine visual style based on evaluation
-  let borderClass = "border-slate-800/80 bg-slate-900/50 hover:bg-slate-800/60 hover:border-slate-700";
+  let borderClass = isVotingOpen
+    ? "border-slate-800/80 bg-slate-900/50 hover:bg-slate-800/60 hover:border-slate-700"
+    : "border-slate-800/60 bg-slate-900/30";
 
   if (isConcluded && showWinner) {
     if (isOfficialWinner && userVotedThis) {
@@ -43,8 +47,11 @@ export const NomineeItem: React.FC<NomineeItemProps> = ({
   return (
     <button
       type="button"
-      onClick={onSelect}
-      className={`w-full text-left p-3.5 sm:p-4 rounded-xl border transition-all duration-200 flex items-center justify-between gap-3 group relative cursor-pointer ${borderClass}`}
+      disabled={!isVotingOpen}
+      onClick={isVotingOpen ? onSelect : undefined}
+      className={`w-full text-left p-3.5 sm:p-4 rounded-xl border transition-all duration-200 flex items-center justify-between gap-3 group relative ${
+        isVotingOpen ? 'cursor-pointer' : 'cursor-default'
+      } ${borderClass}`}
     >
       <div className="flex items-center gap-3.5 flex-1 min-w-0">
         {/* Selection Indicator Icon */}

@@ -3,6 +3,7 @@ import { Trophy, Award, Gamepad2 } from 'lucide-react';
 import { Edition, UserVotes } from '../types';
 import { ScoreSummary } from './ScoreSummary';
 import { CategoryStatsTable } from './CategoryStatsTable';
+import { useCommunityVotes } from '../hooks/useCommunityVotes';
 
 interface StatsViewProps {
   edition: Edition;
@@ -22,6 +23,8 @@ export const StatsView: React.FC<StatsViewProps> = ({
   totalVoted,
   score
 }) => {
+  const { distribution } = useCommunityVotes(edition.year, edition.status);
+
   // Aggregate wins per game
   const gamesLeaderboard = useMemo(() => {
     const tally: Record<string, { name: string; details?: string | null; wins: number; categories: string[] }> = {};
@@ -66,7 +69,7 @@ export const StatsView: React.FC<StatsViewProps> = ({
       ) : (
         <>
           {/* 2. Estatísticas Comunitárias & Tabela de Chutes por Categoria */}
-          <CategoryStatsTable edition={edition} userVotes={votes} />
+          <CategoryStatsTable edition={edition} userVotes={votes} realDistribution={distribution} />
 
           {/* 3. Top Winning Games Leaderboard */}
           <section className="bg-slate-900/40 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">

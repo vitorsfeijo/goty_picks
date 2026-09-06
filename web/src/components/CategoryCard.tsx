@@ -9,6 +9,7 @@ interface CategoryCardProps {
   onVote: (categoryId: string, nomineeId: string) => void;
   isConcluded: boolean;
   revealAll?: boolean;
+  isVotingOpen?: boolean;
 }
 
 export const CategoryCard: React.FC<CategoryCardProps> = ({
@@ -16,7 +17,8 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   selectedNomineeId,
   onVote,
   isConcluded,
-  revealAll = false
+  revealAll = false,
+  isVotingOpen = true
 }) => {
   const hasVote = Boolean(selectedNomineeId);
 
@@ -79,6 +81,10 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
               <CheckCircle className="w-3.5 h-3.5" />
               Preenchido
             </span>
+          ) : !isVotingOpen ? (
+            <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-800/60 text-slate-500">
+              Encerrado
+            </span>
           ) : (
             <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-400">
               Pendente
@@ -99,6 +105,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
             isOfficialWinner={nominee.winner || category.winner_id === nominee.id}
             userVotedThis={selectedNomineeId === nominee.id}
             showWinner={showWinner}
+            isVotingOpen={isVotingOpen}
           />
         ))}
       </div>

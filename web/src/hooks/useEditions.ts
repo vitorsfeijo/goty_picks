@@ -20,7 +20,10 @@ export function useEditions() {
         const data: EditionSummary[] = await res.json();
         setEditions(data);
         if (data.length > 0) {
-          setSelectedYear(data[0].year);
+          const params = new URLSearchParams(window.location.search);
+          const urlYear = Number(params.get('year'));
+          const found = data.find((e) => e.year === urlYear);
+          setSelectedYear(found ? found.year : data[0].year);
         }
       } catch (err: any) {
         console.error('Error loading editions:', err);

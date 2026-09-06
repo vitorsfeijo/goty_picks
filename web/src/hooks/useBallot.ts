@@ -35,20 +35,67 @@ export function useBallot(edition: Edition | null, user: User | null) {
     let active = true;
     setSyncing(true);
     setSyncError(null);
+
+    const localVotes = readLocalBallot(storageKey);
+
     void supabase.from('votes').select('category_id, nominee_id').eq('year', year).eq('user_id', user.id)
-      .then(({ data, error }) => {
+      .then(async ({ data, error }) => {
         if (!active) return;
-        setSyncing(false);
         if (error) {
+          setSyncing(false);
           setSyncError('Não foi possível carregar seus palpites salvos.');
-          setVotes(readLocalBallot(storageKey));
+          setVotes(localVotes);
           return;
         }
-        setVotes(Object.fromEntries((data ?? []).map((vote) => [vote.category_id, vote.nominee_id])));
+
+        const cloudVotes: UserVotes = Object.fromEntries(
+          (data ?? []).map((vote) => [vote.category_id, vote.nominee_id])
+        );
+
+        // Merge: local votes that are missing in cloud get preserved and uploaded
+        const merged: UserVotes = { ...cloudVotes };
+        const pendingUpload: { user_id: string; year: number; category_id: string; nominee_id: string }[] = [];
+
+        for (const [catId, nomId] of Object.entries(localVotes)) {
+          if (!merged[catId]) {
+            merged[catId] = nomId;
+            if (edition?.status === 'open') {
+              pendingUpload.push({
+                user_id: user.id,
+                year,
+                category_id: catId,
+                nominee_id: nomId
+              });
+            }
+          }
+        }
+
+        if (pendingUpload.length > 0 && supabase) {
+          const { error: upsertError } = await supabase.from('votes').upsert(
+            pendingUpload,
+            { onConflict: 'user_id,year,category_id' }
+          );
+          if (upsertError) {
+            console.warn('Could not sync pending local votes to cloud:', upsertError.message);
+          }
+        }
+
+        if (!active) return;
+        setSyncing(false);
+        setVotes(merged);
+
+        // Keep local cache in sync with merged votes
+        if (storageKey) {
+          try {
+            localStorage.setItem(storageKey, JSON.stringify(merged));
+          } catch (e) {
+            console.warn('Could not update localStorage cache:', e);
+          }
+        }
       });
 
     return () => { active = false; };
-  }, [year, storageKey, user]);
+  }, [year, storageKey, user, edition?.status]);
 
   const setVote = async (categoryId: string, nomineeId: string) => {
     if (!year || !storageKey) return;
@@ -60,9 +107,10 @@ export function useBallot(edition: Edition | null, user: User | null) {
     const updated = { ...previous, [categoryId]: nomineeId };
     setVotes(updated);
 
+    try { localStorage.setItem(storageKey, JSON.stringify(updated)); }
+    catch (error) { console.warn('Could not save votes to localStorage:', error); }
+
     if (!user || !supabase) {
-      try { localStorage.setItem(storageKey, JSON.stringify(updated)); }
-      catch (error) { console.warn('Could not save votes to localStorage:', error); }
       return;
     }
 
@@ -75,6 +123,8 @@ export function useBallot(edition: Edition | null, user: User | null) {
     setSyncing(false);
     if (error) {
       setVotes(previous);
+      try { localStorage.setItem(storageKey, JSON.stringify(previous)); }
+      catch {}
       setSyncError(error.message.includes('row-level security') ? 'Este bolão está fechado para alterações.' : 'Não foi possível salvar seu palpite.');
     }
   };
@@ -87,9 +137,10 @@ export function useBallot(edition: Edition | null, user: User | null) {
     }
     const previous = votes;
     setVotes({});
+    try { localStorage.removeItem(storageKey); }
+    catch (error) { console.warn('Could not clear votes from localStorage:', error); }
+
     if (!user || !supabase) {
-      try { localStorage.removeItem(storageKey); }
-      catch (error) { console.warn('Could not clear votes from localStorage:', error); }
       return;
     }
 
@@ -99,6 +150,8 @@ export function useBallot(edition: Edition | null, user: User | null) {
     setSyncing(false);
     if (error) {
       setVotes(previous);
+      try { localStorage.setItem(storageKey, JSON.stringify(previous)); }
+      catch {}
       setSyncError('Não foi possível limpar seus palpites.');
     }
   };

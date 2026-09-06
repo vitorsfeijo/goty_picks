@@ -8,7 +8,17 @@ import { AuthButton } from './components/AuthButton';
 import { CategoryCard } from './components/CategoryCard';
 import { BallotProgress } from './components/BallotProgress';
 import { StatsView } from './components/StatsView';
+import { LeaderboardView } from './components/LeaderboardView';
 import { Search, Loader2, Trophy, Flame, Eye, EyeOff } from 'lucide-react';
+
+function getInitialTab(): 'ballot' | 'stats' | 'leaderboard' {
+  const params = new URLSearchParams(window.location.search);
+  const tab = params.get('tab');
+  if (tab === 'stats' || tab === 'leaderboard' || tab === 'ballot') {
+    return tab;
+  }
+  return 'ballot';
+}
 
 export const App: React.FC = () => {
   const {
@@ -38,9 +48,19 @@ export const App: React.FC = () => {
     syncError
   } = useBallot(activeEdition, user);
 
-  const [activeTab, setActiveTab] = useState<'ballot' | 'stats'>('ballot');
+  const [activeTab, setActiveTab] = useState<'ballot' | 'stats' | 'leaderboard'>(getInitialTab);
   const [searchQuery, setSearchQuery] = useState('');
   const [revealAllSpoilers, setRevealAllSpoilers] = useState(false);
+
+  // Sync year and tab in URL
+  React.useEffect(() => {
+    if (!selectedYear) return;
+    const params = new URLSearchParams(window.location.search);
+    params.set('year', String(selectedYear));
+    params.set('tab', activeTab);
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState(null, '', newUrl);
+  }, [selectedYear, activeTab]);
 
   // Filter categories by search query
   const filteredCategories = useMemo(() => {
@@ -177,6 +197,7 @@ export const App: React.FC = () => {
                       onVote={setVote}
                       isConcluded={activeEdition?.status === 'concluded'}
                       revealAll={revealAllSpoilers}
+                      isVotingOpen={activeEdition?.status === 'open'}
                     />
                   ))}
 
@@ -196,6 +217,15 @@ export const App: React.FC = () => {
                 votes={votes}
                 totalVoted={totalVoted}
                 score={score}
+              />
+            )}
+
+            {/* TAB: Classificação (Leaderboard) */}
+            {activeTab === 'leaderboard' && (
+              <LeaderboardView
+                year={activeEdition!.year}
+                status={activeEdition?.status}
+                currentUserId={user?.id}
               />
             )}
           </div>

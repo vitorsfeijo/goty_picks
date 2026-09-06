@@ -1,18 +1,27 @@
 import React, { useState, useMemo } from 'react';
 import { Target, Zap, Users, Search, Trophy, CheckCircle2, XCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { Edition, UserVotes } from '../types';
-import { computeCommunityStats } from '../utils/communityStats';
+import { computeCommunityStats, type RawVoteDistribution } from '../utils/communityStats';
 
 interface CategoryStatsTableProps {
   edition: Edition;
   userVotes: UserVotes;
+  realDistribution?: RawVoteDistribution[];
 }
 
-export const CategoryStatsTable: React.FC<CategoryStatsTableProps> = ({ edition, userVotes }) => {
+export const CategoryStatsTable: React.FC<CategoryStatsTableProps> = ({
+  edition,
+  userVotes,
+  realDistribution
+}) => {
   const [search, setSearch] = useState('');
   const [expandedCat, setExpandedCat] = useState<string | null>(null);
 
-  const stats = useMemo(() => computeCommunityStats(edition), [edition]);
+  const stats = useMemo(
+    () => computeCommunityStats(edition, realDistribution),
+    [edition, realDistribution]
+  );
+  const isRealData = Boolean(realDistribution && realDistribution.length > 0);
 
   const filteredCategories = useMemo(() => {
     if (!search.trim()) return stats.categories;
@@ -81,7 +90,7 @@ export const CategoryStatsTable: React.FC<CategoryStatsTableProps> = ({ edition,
           <div className="flex items-center justify-between mb-3">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
               <Users className="w-3.5 h-3.5" />
-              Comunidade
+              {isRealData ? 'Supabase Live' : 'Comunidade'}
             </span>
             <span className="text-xl font-black text-amber-400">
               {stats.totalParticipants.toLocaleString()}
@@ -91,7 +100,9 @@ export const CategoryStatsTable: React.FC<CategoryStatsTableProps> = ({ edition,
             Total de Palpites
           </h4>
           <p className="text-xs text-slate-400 mt-1">
-            Chutes registrados e computados na edição de {edition.year}.
+            {isRealData
+              ? 'Votos sincronizados e computados no banco de dados.'
+              : `Estimativa de palpites computados na edição de ${edition.year}.`}
           </p>
         </div>
       </div>
