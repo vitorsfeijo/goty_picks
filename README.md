@@ -1,6 +1,6 @@
 # GOTY Picks 🏆
 
-Plataforma de palpites para o **The Game Awards**. Os dados de categorias,
+[Plataforma de palpites](https://vitorsfeijo.github.io/goty_picks/) para o **The Game Awards**. Os dados de categorias,
 indicados e vencedores são coletados por um scraper Python; o frontend é uma
 SPA React estática; e o Supabase cuida da autenticação, dos palpites e das
 regras de acesso.

@@ -1,0 +1,891 @@
+{
+  "year": 2014,
+  "title": "The Game Awards 2014",
+  "status": "concluded",
+  "last_updated": "2026-09-06T13:28:44.635353+00:00",
+  "categories_count": 21,
+  "categories": [
+    {
+      "id": "jogo-do-ano",
+      "title": "Jogo do Ano",
+      "nominees": [
+        {
+          "id": "dragon-age-inquisition",
+          "name": "Dragon Age: Inquisition",
+          "details": "BioWare",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "bayonetta-2",
+          "name": "Bayonetta 2",
+          "details": "PlatinumGames",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "dark-souls-ii",
+          "name": "Dark Souls II",
+          "details": "FromSoftware",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hearthstone-heroes-of-warcraft",
+          "name": "Hearthstone: Heroes of Warcraft",
+          "details": "Blizzard Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "middle-earth-shadow-of-mordor",
+          "name": "Middle-earth: Shadow of Mordor",
+          "details": "Monolith Productions",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "dragon-age-inquisition"
+    },
+    {
+      "id": "desenvolvedora-do-ano",
+      "title": "Desenvolvedora do Ano",
+      "nominees": [
+        {
+          "id": "nintendo",
+          "name": "Nintendo",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "blizzard-entertainment",
+          "name": "Blizzard Entertainment",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "monolith-productions",
+          "name": "Monolith Productions",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "telltale-games",
+          "name": "Telltale Games",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ubisoft-montreal",
+          "name": "Ubisoft Montreal",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "nintendo"
+    },
+    {
+      "id": "melhor-narrativa",
+      "title": "Melhor Narrativa",
+      "nominees": [
+        {
+          "id": "valiant-hearts-the-great-war",
+          "name": "Valiant Hearts: The Great War",
+          "details": "Ubisoft Montpellier",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "south-park-the-stick-of-truth",
+          "name": "South Park: The Stick of Truth",
+          "details": "Obsidian Entertainment e South Park Digital Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-walking-dead-season-two",
+          "name": "The Walking Dead: Season Two",
+          "details": "Telltale Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-wolf-among-us",
+          "name": "The Wolf Among Us",
+          "details": "Telltale Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "wolfenstein-the-new-order",
+          "name": "Wolfenstein: The New Order",
+          "details": "MachineGames",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "valiant-hearts-the-great-war"
+    },
+    {
+      "id": "melhor-trilha-sonora",
+      "title": "Melhor Trilha Sonora",
+      "nominees": [
+        {
+          "id": "destiny",
+          "name": "Destiny",
+          "details": "Michael Salvatori, C. Paul Johnson, Martin O'Donnell e Paul McCartney",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "alien-isolation",
+          "name": "Alien: Isolation",
+          "details": "Byron Bullock, Sam Cooper, Jeff van Dyck, Christian Henson, Joe Henson, Haydn Payne e Alexis Smith",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "child-of-light",
+          "name": "Child of Light",
+          "details": "Béatrice Martin",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "sunset-overdrive",
+          "name": "Sunset Overdrive",
+          "details": "Boris Salchow",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "transistor",
+          "name": "Transistor",
+          "details": "Darren Korb",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "destiny"
+    },
+    {
+      "id": "melhor-jogo-independente",
+      "title": "Melhor Jogo Independente",
+      "nominees": [
+        {
+          "id": "shovel-knight",
+          "name": "Shovel Knight",
+          "details": "Yacht Club Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "broken-age-act-i",
+          "name": "Broken Age Act I",
+          "details": "Double Fine Productions",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "monument-valley",
+          "name": "Monument Valley",
+          "details": "Ustwo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "transistor",
+          "name": "Transistor",
+          "details": "Supergiant Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-vanishing-of-ethan-carter",
+          "name": "The Vanishing of Ethan Carter",
+          "details": "The Astronauts",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "shovel-knight"
+    },
+    {
+      "id": "melhor-jogo-mobile-portatil",
+      "title": "Melhor Jogo Mobile/Portátil",
+      "nominees": [
+        {
+          "id": "hearthstone-heroes-of-warcraft",
+          "name": "Hearthstone: Heroes of Warcraft",
+          "details": "Blizzard Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "bravely-default",
+          "name": "Bravely Default",
+          "details": "Silicon Studio e Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "monument-valley",
+          "name": "Monument Valley",
+          "details": "Ustwo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-smash-bros-for-nintendo-3ds",
+          "name": "Super Smash Bros. for Nintendo 3DS",
+          "details": "Sora Ltd e Bandai Namco Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "threes",
+          "name": "Threes",
+          "details": "Sirvo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "hearthstone-heroes-of-warcraft"
+    },
+    {
+      "id": "melhor-performance",
+      "title": "Melhor Performance",
+      "nominees": [
+        {
+          "id": "trey-parker-como-varias-vozes",
+          "name": "Trey Parker como várias vozes",
+          "details": "South Park: The Stick of Truth",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "adam-harrington-como-bigby-wolf",
+          "name": "Adam Harrington como Bigby Wolf",
+          "details": "The Wolf Among Us",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "kevin-spacey-como-jonathan-irons",
+          "name": "Kevin Spacey como Jonathan Irons",
+          "details": "Call of Duty: Advanced Warfare",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "melissa-hutchison-como-clementine",
+          "name": "Melissa Hutchison como Clementine",
+          "details": "The Walking Dead: Season Two",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "troy-baker-como-talion",
+          "name": "Troy Baker como Talion",
+          "details": "Middle-earth: Shadow of Mordor",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "trey-parker-como-varias-vozes"
+    },
+    {
+      "id": "jogos-pela-mudanca",
+      "title": "Jogos pela Mudança",
+      "nominees": [
+        {
+          "id": "valiant-hearts-the-great-war",
+          "name": "Valiant Hearts: The Great War",
+          "details": "Ubisoft Montpellier",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "mountain",
+          "name": "Mountain",
+          "details": "David OReilly",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "never-alone",
+          "name": "Never Alone",
+          "details": "Upper One Games e E-Line Media",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-last-of-us-left-behind",
+          "name": "The Last of Us: Left Behind",
+          "details": "Naughty Dog",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "this-war-of-mine",
+          "name": "This War of Mine",
+          "details": "11 bit studios",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "valiant-hearts-the-great-war"
+    },
+    {
+      "id": "melhor-jogo-de-tiro",
+      "title": "Melhor Jogo de Tiro",
+      "nominees": [
+        {
+          "id": "far-cry-4",
+          "name": "Far Cry 4",
+          "details": "Ubisoft Montreal",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-advanced-warfare",
+          "name": "Call of Duty: Advanced Warfare",
+          "details": "Sledgehammer Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "destiny",
+          "name": "Destiny",
+          "details": "Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "titanfall",
+          "name": "Titanfall",
+          "details": "Respawn Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "wolfenstein-the-new-order",
+          "name": "Wolfenstein: The New Order",
+          "details": "MachineGames",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "far-cry-4"
+    },
+    {
+      "id": "melhor-jogo-de-acao-aventura",
+      "title": "Melhor Jogo de Ação-aventura",
+      "nominees": [
+        {
+          "id": "middle-earth-shadow-of-mordor",
+          "name": "Middle-earth: Shadow of Mordor",
+          "details": "Monolith Productions",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "assassin-s-creed-unity",
+          "name": "Assassin's Creed Unity",
+          "details": "Ubisoft Montreal",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "alien-isolation",
+          "name": "Alien: Isolation",
+          "details": "The Creative Assembly",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "bayonetta-2",
+          "name": "Bayonetta 2",
+          "details": "PlatinumGames",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "sunset-overdrive",
+          "name": "Sunset Overdrive",
+          "details": "Insomniac Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "middle-earth-shadow-of-mordor"
+    },
+    {
+      "id": "melhor-jogo-de-rpg",
+      "title": "Melhor Jogo de RPG",
+      "nominees": [
+        {
+          "id": "dragon-age-inquisition",
+          "name": "Dragon Age: Inquisition",
+          "details": "BioWare",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "bravely-default",
+          "name": "Bravely Default",
+          "details": "Silicon Studio e Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "dark-souls-ii",
+          "name": "Dark Souls II",
+          "details": "FromSoftware",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "divinity-original-sin",
+          "name": "Divinity: Original Sin",
+          "details": "Larian Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "south-park-the-stick-of-truth",
+          "name": "South Park: The Stick of Truth",
+          "details": "Obsidian Entertainment e South Park Digital Studios",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "dragon-age-inquisition"
+    },
+    {
+      "id": "melhor-jogo-de-luta",
+      "title": "Melhor Jogo de Luta",
+      "nominees": [
+        {
+          "id": "super-smash-bros-for-wii-u",
+          "name": "Super Smash Bros. for Wii U",
+          "details": "Sora Ltd. e Bandai Namco Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "killer-instinct-season-two",
+          "name": "Killer Instinct: Season Two",
+          "details": "Double Helix Games, Iron Galaxy Studios, Rare e Microsoft Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "persona-4-arena-ultimax",
+          "name": "Persona 4 Arena Ultimax",
+          "details": "Arc System Works",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-smash-bros-for-nintendo-3ds",
+          "name": "Super Smash Bros. for Nintendo 3DS",
+          "details": "Sora Ltd. e Bandai Namco Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ultra-street-fighter-iv",
+          "name": "Ultra Street Fighter IV",
+          "details": "Capcom",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "super-smash-bros-for-wii-u"
+    },
+    {
+      "id": "melhor-jogo-para-familia",
+      "title": "Melhor Jogo para Família",
+      "nominees": [
+        {
+          "id": "mario-kart-8",
+          "name": "Mario Kart 8",
+          "details": "Nintendo EAD",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "disney-infinity-marvel-super-heroes",
+          "name": "Disney Infinity: Marvel Super Heroes",
+          "details": "Avalanche Software",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fantasia-music-evolved",
+          "name": "Fantasia: Music Evolved",
+          "details": "Harmonix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "skylanders-trap-team",
+          "name": "Skylanders: Trap Team",
+          "details": "Toys for Bob e Beenox",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "tomodachi-life",
+          "name": "Tomodachi Life",
+          "details": "Nintendo SPD",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "mario-kart-8"
+    },
+    {
+      "id": "melhor-jogo-de-esporte-corrida",
+      "title": "Melhor Jogo de Esporte/Corrida",
+      "nominees": [
+        {
+          "id": "mario-kart-8",
+          "name": "Mario Kart 8",
+          "details": "Nintendo EAD",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "fifa-15",
+          "name": "FIFA 15",
+          "details": "EA Canada",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "forza-horizon-2",
+          "name": "Forza Horizon 2",
+          "details": "Playground Games, Sumo Digital e Turn 10 Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nba-2k15",
+          "name": "NBA 2K15",
+          "details": "Visual Concepts",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "trials-fusion",
+          "name": "Trials Fusion",
+          "details": "RedLynx, Ubisoft Shanghai e Ubisoft Kiev",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "mario-kart-8"
+    },
+    {
+      "id": "melhor-experiencia-on-line",
+      "title": "Melhor Experiência On-line",
+      "nominees": [
+        {
+          "id": "destiny",
+          "name": "Destiny",
+          "details": "Bungie",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-advanced-warfare",
+          "name": "Call of Duty: Advanced Warfare",
+          "details": "Sledgehammer Games, High Moon Studios e Raven Software",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "dark-souls-ii",
+          "name": "Dark Souls II",
+          "details": "FromSoftware",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hearthstone-heroes-of-warcraft",
+          "name": "Hearthstone: Heroes of Warcraft",
+          "details": "Blizzard Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "titanfall",
+          "name": "Titanfall",
+          "details": "Respawn Entertainment",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "destiny"
+    },
+    {
+      "id": "melhor-remasterizacao",
+      "title": "Melhor Remasterização",
+      "nominees": [
+        {
+          "id": "grand-theft-auto-v",
+          "name": "Grand Theft Auto V",
+          "details": "Rockstar North",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "halo-the-master-chief-collection",
+          "name": "Halo: The Master Chief Collection",
+          "details": "Bungie e 343 Industries; redesenvolvido pela 343 Industries",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "pokemon-omega-ruby-e-alpha-sapphire",
+          "name": "Pokémon Omega Ruby e Alpha Sapphire",
+          "details": "Game Freak",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-last-of-us-remastered",
+          "name": "The Last of Us Remastered",
+          "details": "Naughty Dog",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "tomb-raider-definitive-edition",
+          "name": "Tomb Raider: Definitive Edition",
+          "details": "Crystal Dynamics; redesenvolvido pela Nixxes Software e United Front Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "grand-theft-auto-v"
+    },
+    {
+      "id": "jogo-mais-aguardado",
+      "title": "Jogo Mais Aguardado",
+      "nominees": [
+        {
+          "id": "the-witcher-3-wild-hunt",
+          "name": "The Witcher 3: Wild Hunt",
+          "details": "CD Projekt Red",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "batman-arkham-knight",
+          "name": "Batman: Arkham Knight",
+          "details": "Rocksteady Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "uncharted-4-a-thief-s-end",
+          "name": "Uncharted 4: A Thief's End",
+          "details": "Naughty Dog",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "evolve",
+          "name": "Evolve",
+          "details": "Turtle Rock Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "bloodborne",
+          "name": "Bloodborne",
+          "details": "FromSoftware",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-witcher-3-wild-hunt"
+    },
+    {
+      "id": "jogador-de-esports-do-ano",
+      "title": "Jogador de eSports do Ano",
+      "nominees": [
+        {
+          "id": "matt-nadeshot-haag",
+          "name": "Matt \"NaDeSHoT\" Haag",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "christopher-get-right-alesund",
+          "name": "Christopher \"GeT RiGhT\" Alesund",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "martin-rekkles-larsson",
+          "name": "Martin \"Rekkles\" Larsson",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "james-firebat-kostesich",
+          "name": "James \"Firebat\" Kostesich",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "xu-fy-linsen",
+          "name": "Xu \"Fy\" Linsen",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "matt-nadeshot-haag"
+    },
+    {
+      "id": "time-de-esports-do-ano",
+      "title": "Time de eSports do Ano",
+      "nominees": [
+        {
+          "id": "ninjas-in-pyjamas",
+          "name": "Ninjas in Pyjamas",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "evil-geniuses",
+          "name": "Evil Geniuses",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "samsung-white",
+          "name": "Samsung White",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "newbee",
+          "name": "Newbee",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "edward-gaming",
+          "name": "Edward Gaming",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "ninjas-in-pyjamas"
+    },
+    {
+      "id": "trending-gamer",
+      "title": "Trending Gamer",
+      "nominees": [
+        {
+          "id": "totalbiscuit",
+          "name": "TotalBiscuit",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "evan-vanoss-fong",
+          "name": "Evan \"Vanoss\" Fong",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "jeff-gerstmann",
+          "name": "Jeff Gerstmann",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "pewdiepie",
+          "name": "PewDiePie",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "stampylonghead",
+          "name": "StampyLongHead",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "totalbiscuit"
+    },
+    {
+      "id": "melhor-criacao-de-fa",
+      "title": "Melhor Criação de Fã",
+      "nominees": [
+        {
+          "id": "twitch-plays-pokemon",
+          "name": "Twitch Plays Pokémon",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "luigi-death-stare",
+          "name": "Luigi Death Stare",
+          "details": "CZBwoi e Rizupicorr",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "it-s-dangerous-to-go-alone",
+          "name": "\"It's Dangerous to Go Alone\"",
+          "details": "Starbomb",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "minecraft",
+          "name": "Minecraft",
+          "details": "Titan City – Colonial Puppet",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mine-the-diamond-minecraft-song",
+          "name": "\"Mine the Diamond (Minecraft Song)\"",
+          "details": "Tobuscus",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "twitch-plays-pokemon"
+    }
+  ]
+}

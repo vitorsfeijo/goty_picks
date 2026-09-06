@@ -11,6 +11,7 @@ interface NavbarProps {
   totalVoted: number;
   totalCategories: number;
   status?: EditionStatus;
+  currentYear?: number; // the most recent / "official" bolão year
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -21,21 +22,32 @@ export const Navbar: React.FC<NavbarProps> = ({
   onSelectTab,
   totalVoted,
   totalCategories,
-  status
+  status,
+  currentYear
 }) => {
   const getStatusBadge = (s?: EditionStatus) => {
-    switch (s) {
-      case 'concluded':
+    if (s === 'concluded') {
+      // Historical retrospective editions vs. the most recent concluded bolão
+      const isRetrospective = selectedYear !== null && selectedYear < (currentYear ?? 2026);
+      if (isRetrospective) {
         return (
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            Concluído
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-violet-500/10 text-violet-400 border border-violet-500/20">
+            🎮 Retrospectivo
           </span>
         );
+      }
+      return (
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+          Concluído
+        </span>
+      );
+    }
+    switch (s) {
       case 'locked':
         return (
           <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20">
-            <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
             Encerrado
           </span>
         );
@@ -43,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       default:
         return (
           <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
             Votação Aberta
           </span>
         );

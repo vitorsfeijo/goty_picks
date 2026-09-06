@@ -86,6 +86,7 @@ export const App: React.FC = () => {
         totalVoted={totalVoted}
         totalCategories={totalCategories}
         status={activeEdition?.status}
+        currentYear={editions[0]?.year}
       />
 
       {/* Main Content Area */}
@@ -120,7 +121,11 @@ export const App: React.FC = () => {
                 {currentEdition.title}
               </h1>
               <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto mt-2">
-                {activeEdition?.status === 'concluded'
+                {activeEdition?.status === 'locked'
+                  ? 'A cerimônia está acontecendo agora! Votação congelada.'
+                  : activeEdition?.status === 'concluded' && activeEdition.year < 2026
+                  ? `Bolão Retrospectivo: escolha seus favoritos de ${activeEdition.year}!`
+                  : activeEdition?.status === 'concluded'
                   ? 'A cerimônia já aconteceu! Confira seus acertos comparados aos vencedores oficiais.'
                   : 'Faça suas escolhas para cada uma das categorias e salve seus palpites.'}
               </p>
@@ -197,7 +202,7 @@ export const App: React.FC = () => {
                       onVote={setVote}
                       isConcluded={activeEdition?.status === 'concluded'}
                       revealAll={revealAllSpoilers}
-                      isVotingOpen={activeEdition?.status === 'open'}
+                      isVotingOpen={activeEdition?.status !== 'locked'}
                     />
                   ))}
 

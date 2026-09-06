@@ -1,0 +1,1269 @@
+{
+  "year": 2017,
+  "title": "The Game Awards 2017",
+  "status": "concluded",
+  "last_updated": "2026-09-06T13:28:49.781594+00:00",
+  "categories_count": 29,
+  "categories": [
+    {
+      "id": "jogo-do-ano",
+      "title": "Jogo do Ano",
+      "nominees": [
+        {
+          "id": "the-legend-of-zelda-breath-of-the-wild",
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "details": "desenvolvido pela Nintendo",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "horizon-zero-dawn",
+          "name": "Horizon Zero Dawn",
+          "details": "desenvolvido pela Guerrilla Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "persona-5",
+          "name": "Persona 5",
+          "details": "desenvolvido pela Atlus",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "playerunknown-s-battlegrounds",
+          "name": "PlayerUnknown's Battlegrounds",
+          "details": "desenvolvido pela PUBG Corporation",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-mario-odyssey",
+          "name": "Super Mario Odyssey",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-legend-of-zelda-breath-of-the-wild"
+    },
+    {
+      "id": "melhor-direcao-de-jogo",
+      "title": "Melhor Direção de Jogo",
+      "nominees": [
+        {
+          "id": "the-legend-of-zelda-breath-of-the-wild",
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "details": "direção de Hidemaro Fujibayashi",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "horizon-zero-dawn",
+          "name": "Horizon Zero Dawn",
+          "details": "direção de Mathijs de Jonge",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "resident-evil-7-biohazard",
+          "name": "Resident Evil 7: Biohazard",
+          "details": "direção de Koshi Nakanishi",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-mario-odyssey",
+          "name": "Super Mario Odyssey",
+          "details": "direção de Kenta Motokura",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "wolfenstein-ii-the-new-colossus",
+          "name": "Wolfenstein II: The New Colossus",
+          "details": "direção de Jens Matthies",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-legend-of-zelda-breath-of-the-wild"
+    },
+    {
+      "id": "melhor-narrativa",
+      "title": "Melhor Narrativa",
+      "nominees": [
+        {
+          "id": "what-remains-of-edith-finch",
+          "name": "What Remains of Edith Finch",
+          "details": "escrito por Ian Dallas",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "hellblade-senua-s-sacrifice",
+          "name": "Hellblade: Senua's Sacrifice",
+          "details": "escrito por Tameem Antoniades e Elizabeth Ashman-Rowe",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "horizon-zero-dawn",
+          "name": "Horizon Zero Dawn",
+          "details": "escrito por John Gonzalez",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nier-automata",
+          "name": "Nier: Automata",
+          "details": "escrito por Yoko Taro, Hana Kikuchi e Yoshiho Akabane",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "wolfenstein-ii-the-new-colossus",
+          "name": "Wolfenstein II: The New Colossus",
+          "details": "escrito por Jen Matthies e Tommy Tordsson Bjork",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "what-remains-of-edith-finch"
+    },
+    {
+      "id": "melhor-direcao-de-arte",
+      "title": "Melhor Direção de Arte",
+      "nominees": [
+        {
+          "id": "cuphead",
+          "name": "Cuphead",
+          "details": "desenvolvido pela StudioMDHR",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2",
+          "name": "Destiny 2",
+          "details": "desenvolvido pela Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "horizon-zero-dawn",
+          "name": "Horizon Zero Dawn",
+          "details": "desenvolvido pela Guerrilla Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "persona-5",
+          "name": "Persona 5",
+          "details": "desenvolvido pela Atlus",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-legend-of-zelda-breath-of-the-wild",
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "cuphead"
+    },
+    {
+      "id": "melhor-trilha-sonora",
+      "title": "Melhor Trilha Sonora",
+      "nominees": [
+        {
+          "id": "nier-automata",
+          "name": "Nier: Automata",
+          "details": "música por Keiichi Okabe e Keigo Hoashi",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "cuphead",
+          "name": "Cuphead",
+          "details": "música por Kristofer Maddigan",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2",
+          "name": "Destiny 2",
+          "details": "música por Michael Salvatori, Skye Lewin e C Paul Johnson",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "persona-5",
+          "name": "Persona 5",
+          "details": "música por Shoji Meguro",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-mario-odyssey",
+          "name": "Super Mario Odyssey",
+          "details": "música por Naoto Kubo, Shiho Fujii e Koji Kondo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-legend-of-zelda-breath-of-the-wild",
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "details": "música por Manaka Kataoka e Yasuaki Iwata",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "nier-automata"
+    },
+    {
+      "id": "melhor-design-de-audio",
+      "title": "Melhor Design de Áudio",
+      "nominees": [
+        {
+          "id": "hellblade-senua-s-sacrifice",
+          "name": "Hellblade: Senua's Sacrifice",
+          "details": "desenvolvido pela Ninja Theory",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2",
+          "name": "Destiny 2",
+          "details": "desenvolvido pela Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "resident-evil-7-biohazard",
+          "name": "Resident Evil 7: Biohazard",
+          "details": "desenvolvido pela Capcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-mario-odyssey",
+          "name": "Super Mario Odyssey",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-legend-of-zelda-breath-of-the-wild",
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "hellblade-senua-s-sacrifice"
+    },
+    {
+      "id": "melhor-performance",
+      "title": "Melhor Performance",
+      "nominees": [
+        {
+          "id": "melina-juergens-como-senua",
+          "name": "Melina Juergens como Senua",
+          "details": "em Hellblade: Senua's Sacrifice",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "ashly-burch-como-aloy",
+          "name": "Ashly Burch como Aloy",
+          "details": "em Horizon Zero Dawn",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "brian-bloom-como-b-j-blazkowicz",
+          "name": "Brian Bloom como B.J. Blazkowicz",
+          "details": "em Wolfenstein II: The New Colossus",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "claudia-black-como-chloe-frazer",
+          "name": "Claudia Black como Chloe Frazer",
+          "details": "em Uncharted: The Lost Legacy",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "laura-bailey-como-nadine-ross",
+          "name": "Laura Bailey como Nadine Ross",
+          "details": "em Uncharted: The Lost Legacy",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "melina-juergens-como-senua"
+    },
+    {
+      "id": "jogo-mais-impactante",
+      "title": "Jogo Mais Impactante",
+      "nominees": [
+        {
+          "id": "hellblade-senua-s-sacrifice",
+          "name": "Hellblade: Senua's Sacrifice",
+          "details": "desenvolvido pela Ninja Theory",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "bury-me-my-love",
+          "name": "Bury Me, My Love",
+          "details": "desenvolvido pela The Pixel Hunt",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "life-is-strange-before-the-storm",
+          "name": "Life is Strange: Before the Storm",
+          "details": "desenvolvido pela Deck Nine",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "night-in-the-woods",
+          "name": "Night in the Woods",
+          "details": "desenvolvido pela Infinite Fall",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "please-knock-on-my-door",
+          "name": "Please Knock on My Door",
+          "details": "desenvolvido pela Levall Games AB",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "what-remains-of-edith-finch",
+          "name": "What Remains of Edith Finch",
+          "details": "desenvolvido pela Giant Sparrow",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "hellblade-senua-s-sacrifice"
+    },
+    {
+      "id": "melhor-jogo-continuo",
+      "title": "Melhor Jogo Contínuo",
+      "nominees": [
+        {
+          "id": "overwatch",
+          "name": "Overwatch",
+          "details": "desenvolvido pela Blizzard Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2",
+          "name": "Destiny 2",
+          "details": "desenvolvido pela Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "grand-theft-auto-online",
+          "name": "Grand Theft Auto Online",
+          "details": "desenvolvido pela Rockstar Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "playerunknown-s-battlegrounds",
+          "name": "PlayerUnknown's Battlegrounds",
+          "details": "desenvolvido pela PUBG Corporation",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "tom-clancy-s-rainbow-six-siege",
+          "name": "Tom Clancy's Rainbow Six Siege",
+          "details": "desenvolvido pela Ubisoft Montreal",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "warframe",
+          "name": "Warframe",
+          "details": "desenvolvido pela Digital Extremes",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "overwatch"
+    },
+    {
+      "id": "melhor-jogo-independente",
+      "title": "Melhor Jogo Independente",
+      "nominees": [
+        {
+          "id": "cuphead",
+          "name": "Cuphead",
+          "details": "desenvolvido pela StudioMDHR",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "hellblade-senua-s-sacrifice",
+          "name": "Hellblade: Senua's Sacrifice",
+          "details": "desenvolvido pela Ninja Theory",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "night-in-the-woods",
+          "name": "Night in the Woods",
+          "details": "desenvolvido pela Infinite Fall",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "pyre",
+          "name": "Pyre",
+          "details": "desenvolvido pela Supergiant Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "what-remains-of-edith-finch",
+          "name": "What Remains of Edith Finch",
+          "details": "desenvolvido pela Giant Sparrow",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "cuphead"
+    },
+    {
+      "id": "melhor-jogo-mobile",
+      "title": "Melhor Jogo Mobile",
+      "nominees": [
+        {
+          "id": "monument-valley-2",
+          "name": "Monument Valley 2",
+          "details": "desenvolvido pela ustwo games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "fire-emblem-heroes",
+          "name": "Fire Emblem Heroes",
+          "details": "desenvolvido pela Intelligent Systems",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hidden-folks",
+          "name": "Hidden Folks",
+          "details": "desenvolvido por Adriaan de Jongh e Sylvain Tegroeg",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "old-man-s-journey",
+          "name": "Old Man's Journey",
+          "details": "desenvolvido pela Broken Rules",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-mario-run",
+          "name": "Super Mario Run",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "monument-valley-2"
+    },
+    {
+      "id": "melhor-jogo-portatil",
+      "title": "Melhor Jogo Portátil",
+      "nominees": [
+        {
+          "id": "metroid-samus-returns",
+          "name": "Metroid: Samus Returns",
+          "details": "desenvolvido pela MercurySteam e Nintendo",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "ever-oasis",
+          "name": "Ever Oasis",
+          "details": "desenvolvido pela Grezzo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fire-emblem-echoes-shadows-of-valentia",
+          "name": "Fire Emblem Echoes: Shadows of Valentia",
+          "details": "desenvolvido pela Intelligent Systems",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "monster-hunter-stories",
+          "name": "Monster Hunter Stories",
+          "details": "desenvolvido pela Marvelous Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "poochy-and-yoshi-s-woolly-world",
+          "name": "Poochy and Yoshi's Woolly World",
+          "details": "desenvolvido pela Good-Feel",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "metroid-samus-returns"
+    },
+    {
+      "id": "melhor-jogo-de-acao",
+      "title": "Melhor Jogo de Ação",
+      "nominees": [
+        {
+          "id": "wolfenstein-ii-the-new-colossus",
+          "name": "Wolfenstein II: The New Colossus",
+          "details": "desenvolvido pela MachineGames",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "cuphead",
+          "name": "Cuphead",
+          "details": "desenvolvido pela StudioMDHR",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2",
+          "name": "Destiny 2",
+          "details": "desenvolvido pela Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nioh",
+          "name": "Nioh",
+          "details": "desenvolvido pela Team Ninja",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "prey",
+          "name": "Prey",
+          "details": "desenvolvido pela Arkane Studios",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "wolfenstein-ii-the-new-colossus"
+    },
+    {
+      "id": "melhor-jogo-de-acao-aventura",
+      "title": "Melhor Jogo de Ação-aventura",
+      "nominees": [
+        {
+          "id": "the-legend-of-zelda-breath-of-the-wild",
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "details": "desenvolvido pela Nintendo",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "assassin-s-creed-origins",
+          "name": "Assassin's Creed Origins",
+          "details": "desenvolvido pela Ubisoft Montreal",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "horizon-zero-dawn",
+          "name": "Horizon Zero Dawn",
+          "details": "desenvolvido pela Guerrilla Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "super-mario-odyssey",
+          "name": "Super Mario Odyssey",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "uncharted-the-lost-legacy",
+          "name": "Uncharted: The Lost Legacy",
+          "details": "desenvolvido pela Naughty Dog",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-legend-of-zelda-breath-of-the-wild"
+    },
+    {
+      "id": "melhor-jogo-de-vr-ar",
+      "title": "Melhor Jogo de VR/AR",
+      "nominees": [
+        {
+          "id": "resident-evil-7-biohazard",
+          "name": "Resident Evil 7: Biohazard",
+          "details": "desenvolvido pela Capcom",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "farpoint",
+          "name": "Farpoint",
+          "details": "desenvolvido pela Impulse Gear",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "lone-echo",
+          "name": "Lone Echo",
+          "details": "desenvolvido pela Ready at Dawn",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "star-trek-bridge-crew",
+          "name": "Star Trek: Bridge Crew",
+          "details": "desenvolvido pela Red Storm Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "superhot-vr",
+          "name": "Superhot VR",
+          "details": "desenvolvido pela Superhot Team",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "resident-evil-7-biohazard"
+    },
+    {
+      "id": "melhor-jogo-de-rpg",
+      "title": "Melhor Jogo de RPG",
+      "nominees": [
+        {
+          "id": "persona-5",
+          "name": "Persona 5",
+          "details": "desenvolvido pela Atlus",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "divinity-original-sin-ii",
+          "name": "Divinity: Original Sin II",
+          "details": "desenvolvido pela Larian Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-xv",
+          "name": "Final Fantasy XV",
+          "details": "desenvolvido pela Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nier-automata",
+          "name": "Nier: Automata",
+          "details": "desenvolvido pela Platinum Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "south-park-the-fractured-but-whole",
+          "name": "South Park: The Fractured But Whole",
+          "details": "desenvolvido pela Ubisoft San Francisco",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "persona-5"
+    },
+    {
+      "id": "melhor-jogo-de-luta",
+      "title": "Melhor Jogo de Luta",
+      "nominees": [
+        {
+          "id": "injustice-2",
+          "name": "Injustice 2",
+          "details": "desenvolvido pela NetherRealm Studios",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "arms",
+          "name": "ARMS",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "marvel-vs-capcom-infinite",
+          "name": "Marvel vs. Capcom: Infinite",
+          "details": "desenvolvido pela Capcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nidhogg-2",
+          "name": "Nidhogg 2",
+          "details": "desenvolvido pela Messhof Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "tekken-7",
+          "name": "Tekken 7",
+          "details": "desenvolvido pela Bandai Namco",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "injustice-2"
+    },
+    {
+      "id": "melhor-jogo-para-familia",
+      "title": "Melhor Jogo para Família",
+      "nominees": [
+        {
+          "id": "super-mario-odyssey",
+          "name": "Super Mario Odyssey",
+          "details": "desenvolvido pela Nintendo",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "mario-kart-8-deluxe",
+          "name": "Mario Kart 8 Deluxe",
+          "details": "desenvolvido pela Nintendo e Bandai Namco Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mario-rabbids-kingdom-battle",
+          "name": "Mario + Rabbids Kingdom Battle",
+          "details": "desenvolvido pela Ubisoft",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "sonic-mania",
+          "name": "Sonic Mania",
+          "details": "desenvolvido por Christian Whitehead, PagodaWest Games, Headcannon",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "splatoon-2",
+          "name": "Splatoon 2",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "super-mario-odyssey"
+    },
+    {
+      "id": "melhor-jogo-de-estrategia",
+      "title": "Melhor Jogo de Estratégia",
+      "nominees": [
+        {
+          "id": "mario-rabbids-kingdom-battle",
+          "name": "Mario + Rabbids Kingdom Battle",
+          "details": "desenvolvido pela Ubisoft",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "halo-wars-2",
+          "name": "Halo Wars 2",
+          "details": "desenvolvido pela Creative Assembly e 343 Industries",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "total-war-warhammer-ii",
+          "name": "Total War: Warhammer II",
+          "details": "desenvolvido pela Creative Assembly",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "tooth-and-tail",
+          "name": "Tooth and Tail",
+          "details": "desenvolvido pela Pocketwatch Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "xcom-2-war-of-the-chosen",
+          "name": "XCOM 2: War of the Chosen",
+          "details": "desenvolvido pela Firaxis Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "mario-rabbids-kingdom-battle"
+    },
+    {
+      "id": "melhor-jogo-de-esporte-corrida",
+      "title": "Melhor Jogo de Esporte/Corrida",
+      "nominees": [
+        {
+          "id": "forza-motorsport-7",
+          "name": "Forza Motorsport 7",
+          "details": "desenvolvido pela Turn 10 Studios",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "fifa-18",
+          "name": "FIFA 18",
+          "details": "desenvolvido pela EA Vancouver",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "gran-turismo-sport",
+          "name": "Gran Turismo Sport",
+          "details": "desenvolvido pela Polyphony Digital",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nba-2k18",
+          "name": "NBA 2K18",
+          "details": "desenvolvido pela Visual Concepts",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "pro-evolution-soccer-2018",
+          "name": "Pro Evolution Soccer 2018",
+          "details": "desenvolvido pela Konami",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "project-cars-2",
+          "name": "Project Cars 2",
+          "details": "desenvolvido pela Slightly Mad Studios",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "forza-motorsport-7"
+    },
+    {
+      "id": "melhor-jogo-multiplayer",
+      "title": "Melhor Jogo Multiplayer",
+      "nominees": [
+        {
+          "id": "playerunknown-s-battlegrounds",
+          "name": "PlayerUnknown's Battlegrounds",
+          "details": "desenvolvido pela PUBG Corporation",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-wwii",
+          "name": "Call of Duty: WWII",
+          "details": "desenvolvido pela Sledgehammer Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2",
+          "name": "Destiny 2",
+          "details": "desenvolvido pela Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fortnite",
+          "name": "Fortnite",
+          "details": "desenvolvido pela Epic Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mario-kart-8-deluxe",
+          "name": "Mario Kart 8 Deluxe",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "splatoon-2",
+          "name": "Splatoon 2",
+          "details": "desenvolvido pela Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "playerunknown-s-battlegrounds"
+    },
+    {
+      "id": "premio-de-jogo-estudantil",
+      "title": "Prêmio de Jogo Estudantil",
+      "nominees": [
+        {
+          "id": "level-squared",
+          "name": "Level Squared",
+          "details": "desenvolvido por Kip Brennan, Stephen Scoglio e Dane Perry Svendsen, Swinburne University",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "falling-sky",
+          "name": "Falling Sky",
+          "details": "desenvolvido por Jonathan Nielssen, Nikolay Savov e Mohsen Shah, National Film and Television School",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "from-light",
+          "name": "From Light",
+          "details": "desenvolvido por Alejandro Grossman, Steven Li e Sherveen Uduwana, University of Southern California",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hollowed",
+          "name": "Hollowed",
+          "details": "developed por Erin Marek, Jerrick Flores e Charley Choucard, University of Central Florida",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "impulsion",
+          "name": "Impulsion",
+          "details": "desenvolvido por Hugo Verger, Remi Bertrand e Maxime Lupinski, Institut de l'Internet et du Multimédia",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "meaning",
+          "name": "Meaning",
+          "details": "desenvolvido por Hariz Yet, DigiPen Institute of Technology Singapore",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "level-squared"
+    },
+    {
+      "id": "melhor-estreia-independente",
+      "title": "Melhor Estreia Independente",
+      "nominees": [
+        {
+          "id": "cuphead",
+          "name": "Cuphead",
+          "details": "desenvolvido pela StudioMDHR",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "golf-story",
+          "name": "Golf Story",
+          "details": "desenvolvido pela Sidebar Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hollow-knight",
+          "name": "Hollow Knight",
+          "details": "desenvolvido pela Team Cherry",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mr-shifty",
+          "name": "Mr. Shifty",
+          "details": "desenvolvido pela Team Shifty",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "slime-rancher",
+          "name": "Slime Rancher",
+          "details": "desenvolvido pela Monomi Park",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "cuphead"
+    },
+    {
+      "id": "jogo-mais-aguardado",
+      "title": "Jogo Mais Aguardado",
+      "nominees": [
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "em desenvolvimento pela Naughty Dog",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "god-of-war",
+          "name": "God of War",
+          "details": "em desenvolvimento pela Santa Monica Studio",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "spider-man",
+          "name": "Spider-Man",
+          "details": "em desenvolvimento pela Insomniac Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "monster-hunter-world",
+          "name": "Monster Hunter: World",
+          "details": "em desenvolvimento pela Capcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "red-dead-redemption-2",
+          "name": "Red Dead Redemption 2",
+          "details": "em desenvolvimento pela Rockstar Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-last-of-us-part-ii"
+    },
+    {
+      "id": "trending-gamer",
+      "title": "Trending Gamer",
+      "nominees": [
+        {
+          "id": "guy-beahm-dr-disrespect",
+          "name": "Guy Beahm (\"Dr DisRespect\")",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "andrea-rene-what-s-good-games",
+          "name": "Andrea Rene (What's Good Games)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "clint-lexa-halfcoordinated",
+          "name": "Clint Lexa (\"Halfcoordinated\")",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mike-grzesiek-shroud",
+          "name": "Mike Grzesiek (\"Shroud\")",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "steven-spohn-ablegamers",
+          "name": "Steven Spohn (AbleGamers)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "guy-beahm-dr-disrespect"
+    },
+    {
+      "id": "melhor-jogo-de-esports",
+      "title": "Melhor Jogo de eSports",
+      "nominees": [
+        {
+          "id": "overwatch",
+          "name": "Overwatch",
+          "details": "desenvolvido pela Blizzard Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "counter-strike-global-offensive",
+          "name": "Counter-Strike: Global Offensive",
+          "details": "desenvolvido pela Valve Corporation",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "dota-2",
+          "name": "Dota 2",
+          "details": "desenvolvido pela Valve Corporation",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "league-of-legends",
+          "name": "League of Legends",
+          "details": "desenvolvido pela Riot Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "rocket-league",
+          "name": "Rocket League",
+          "details": "desenvolvido pela Psyonix",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "overwatch"
+    },
+    {
+      "id": "melhor-jogador-de-esports",
+      "title": "Melhor Jogador de eSports",
+      "nominees": [
+        {
+          "id": "lee-sang-hyeok-faker-sk-telecom-1-league-of-legends",
+          "name": "Lee Sang-hyeok \"Faker\" (SK Telecom 1, League of Legends)",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "marcelo-coldzera-david-sk-gaming-counter-strike-go",
+          "name": "Marcelo \"coldzera\" David (SK Gaming, Counter-Strike: GO)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nikola-niko-kovac-faze-clan-counter-strike-go",
+          "name": "Nikola \"NiKo\" Kovac (FaZe Clan, Counter-Strike: GO)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "je-hong-ryujehong-ryu-seoul-dynasty-overwatch",
+          "name": "Je-hong \"ryujehong” Ryu (Seoul Dynasty, Overwatch)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "kuro-kuroky-salehi-takhasomi-team-liquid-dota-2",
+          "name": "Kuro \"KuroKy\" Salehi Takhasomi (Team Liquid, Dota 2)",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "lee-sang-hyeok-faker-sk-telecom-1-league-of-legends"
+    },
+    {
+      "id": "melhor-time-de-esports",
+      "title": "Melhor Time de eSports",
+      "nominees": [
+        {
+          "id": "cloud9",
+          "name": "Cloud9",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "faze-clan",
+          "name": "FaZe Clan",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "lunatic-hai",
+          "name": "Lunatic-Hai",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "sk-telecom-t1",
+          "name": "SK Telecom T1",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "team-liquid",
+          "name": "Team Liquid",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "cloud9"
+    },
+    {
+      "id": "chinese-fan-game-award",
+      "title": "Chinese Fan Game Award",
+      "nominees": [
+        {
+          "id": "jx3-hd",
+          "name": "jx3 HD",
+          "details": "desenvolvido pela Kingsoft Corporation",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "honor-of-kings",
+          "name": "Honor of Kings",
+          "details": "desenvolvido pela Timi Studio Group",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "icey",
+          "name": "ICEY",
+          "details": "desenvolvido pela FantaBlade Network",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "gumballs-dungeons",
+          "name": "Gumballs & Dungeons",
+          "details": "desenvolvido pela QcPlay Limited",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "monument-valley-2",
+          "name": "Monument Valley 2",
+          "details": "desenvolvido pela ustwo games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "jx3-hd"
+    }
+  ]
+}

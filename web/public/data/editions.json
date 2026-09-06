@@ -1,5 +1,13 @@
 [
   {
+    "year": 2026,
+    "title": "The Game Awards 2026",
+    "status": "open",
+    "categories_count": 0,
+    "has_winners": false,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2026"
+  },
+  {
     "year": 2025,
     "title": "The Game Awards 2025",
     "status": "concluded",
@@ -14,5 +22,85 @@
     "categories_count": 32,
     "has_winners": true,
     "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2024"
+  },
+  {
+    "year": 2023,
+    "title": "The Game Awards 2023",
+    "status": "concluded",
+    "categories_count": 32,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2023"
+  },
+  {
+    "year": 2022,
+    "title": "The Game Awards 2022",
+    "status": "concluded",
+    "categories_count": 32,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2022"
+  },
+  {
+    "year": 2021,
+    "title": "The Game Awards 2021",
+    "status": "concluded",
+    "categories_count": 32,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2021"
+  },
+  {
+    "year": 2020,
+    "title": "The Game Awards 2020",
+    "status": "concluded",
+    "categories_count": 26,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2020"
+  },
+  {
+    "year": 2019,
+    "title": "The Game Awards 2019",
+    "status": "concluded",
+    "categories_count": 25,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2019"
+  },
+  {
+    "year": 2018,
+    "title": "The Game Awards 2018",
+    "status": "concluded",
+    "categories_count": 24,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2018"
+  },
+  {
+    "year": 2017,
+    "title": "The Game Awards 2017",
+    "status": "concluded",
+    "categories_count": 29,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2017"
+  },
+  {
+    "year": 2016,
+    "title": "The Game Awards 2016",
+    "status": "concluded",
+    "categories_count": 24,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2016"
+  },
+  {
+    "year": 2015,
+    "title": "The Game Awards 2015",
+    "status": "concluded",
+    "categories_count": 22,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2015"
+  },
+  {
+    "year": 2014,
+    "title": "The Game Awards 2014",
+    "status": "concluded",
+    "categories_count": 21,
+    "has_winners": true,
+    "url": "https://pt.wikipedia.org/wiki/The_Game_Awards_2014"
   }
 ]

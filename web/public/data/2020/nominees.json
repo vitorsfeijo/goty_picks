@@ -1,0 +1,1136 @@
+{
+  "year": 2020,
+  "title": "The Game Awards 2020",
+  "status": "concluded",
+  "last_updated": "2026-09-06T13:28:56.463527+00:00",
+  "categories_count": 26,
+  "categories": [
+    {
+      "id": "jogo-do-ano",
+      "title": "Jogo do Ano",
+      "nominees": [
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Naughty Dog/Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "animal-crossing-new-horizons",
+          "name": "Animal Crossing: New Horizons",
+          "details": "Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "doom-eternal",
+          "name": "Doom Eternal",
+          "details": "id Software/Bethesda Softworks",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-remake",
+          "name": "Final Fantasy VII Remake",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ghost-of-tsushima",
+          "name": "Ghost of Tsushima",
+          "details": "Sucker Punch Productions/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hades",
+          "name": "Hades",
+          "details": "Supergiant Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-last-of-us-part-ii"
+    },
+    {
+      "id": "melhor-direcao-de-jogo",
+      "title": "Melhor Direção de Jogo",
+      "nominees": [
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Naughty Dog/Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-remake",
+          "name": "Final Fantasy VII Remake",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ghost-of-tsushima",
+          "name": "Ghost of Tsushima",
+          "details": "Sucker Punch Productions/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hades",
+          "name": "Hades",
+          "details": "Supergiant Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "half-life-alyx",
+          "name": "Half-Life: Alyx",
+          "details": "Valve",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-last-of-us-part-ii"
+    },
+    {
+      "id": "melhor-narrativa",
+      "title": "Melhor Narrativa",
+      "nominees": [
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Neil Druckmann e Halley Gross",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "13-sentinels-aegis-rim",
+          "name": "13 Sentinels: Aegis Rim",
+          "details": "George Kamitani",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-remake",
+          "name": "Final Fantasy VII Remake",
+          "details": "Kazushige Nojima, Motomu Toriyama, Hiroaki Iwaki e Sachie Hirano",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ghost-of-tsushima",
+          "name": "Ghost of Tsushima",
+          "details": "Ian Ryan, Liz Albl, Patrick Downs e Jordan Lemos",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hades",
+          "name": "Hades",
+          "details": "Greg Kasavin",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-last-of-us-part-ii"
+    },
+    {
+      "id": "melhor-direcao-de-arte",
+      "title": "Melhor Direção de Arte",
+      "nominees": [
+        {
+          "id": "ghost-of-tsushima",
+          "name": "Ghost of Tsushima",
+          "details": "Sucker Punch Productions/Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "final-fantasy-vii-remake",
+          "name": "Final Fantasy VII Remake",
+          "details": "Square Enix",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hades",
+          "name": "Hades",
+          "details": "Supergiant Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ori-and-the-will-of-the-wisps",
+          "name": "Ori and the Will of the Wisps",
+          "details": "Moon Studios/Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Naughty Dog/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "ghost-of-tsushima"
+    },
+    {
+      "id": "melhor-trilha-sonora",
+      "title": "Melhor Trilha Sonora",
+      "nominees": [
+        {
+          "id": "final-fantasy-vii-remake",
+          "name": "Final Fantasy VII Remake",
+          "details": "Nobuo Uematsu, Masashi Hamauzu e Mitsuto Suzuki",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "doom-eternal",
+          "name": "Doom Eternal",
+          "details": "Mick Gordon",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hades",
+          "name": "Hades",
+          "details": "Darren Korb",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ori-and-the-will-of-the-wisps",
+          "name": "Ori and the Will of the Wisps",
+          "details": "Gareth Coker",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Gustavo Santaolalla e Mac Quayle",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "final-fantasy-vii-remake"
+    },
+    {
+      "id": "melhor-design-de-audio",
+      "title": "Melhor Design de Áudio",
+      "nominees": [
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Naughty Dog/Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "doom-eternal",
+          "name": "Doom Eternal",
+          "details": "id Software/Bethesda Softworks",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "half-life-alyx",
+          "name": "Half-Life: Alyx",
+          "details": "Valve",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ghost-of-tsushima",
+          "name": "Ghost of Tsushima",
+          "details": "Sucker Punch Productions/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "resident-evil-3",
+          "name": "Resident Evil 3",
+          "details": "Capcom",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-last-of-us-part-ii"
+    },
+    {
+      "id": "melhor-performance",
+      "title": "Melhor Performance",
+      "nominees": [
+        {
+          "id": "laura-bailey-como-abby",
+          "name": "Laura Bailey como Abby",
+          "details": "The Last of Us Part II",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "ashley-johnson-como-ellie",
+          "name": "Ashley Johnson como Ellie",
+          "details": "The Last of Us Part II",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "daisuke-tsuji-como-jin-sakai",
+          "name": "Daisuke Tsuji como Jin Sakai",
+          "details": "Ghost of Tsushima",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "logan-cunningham-como-hades",
+          "name": "Logan Cunningham como Hades",
+          "details": "Hades",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nadji-jeter-como-miles-morales",
+          "name": "Nadji Jeter como Miles Morales",
+          "details": "Spider-Man: Miles Morales",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "laura-bailey-como-abby"
+    },
+    {
+      "id": "melhor-jogo-continuo",
+      "title": "Melhor Jogo Contínuo",
+      "nominees": [
+        {
+          "id": "no-man-s-sky",
+          "name": "No Man's Sky",
+          "details": "Hello Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "apex-legends",
+          "name": "Apex Legends",
+          "details": "Respawn Entertainment/Electronic Arts",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2",
+          "name": "Destiny 2",
+          "details": "Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-warzone",
+          "name": "Call of Duty: Warzone",
+          "details": "Infinity Ward/Raven Software/Activision",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fortnite",
+          "name": "Fortnite",
+          "details": "Epic Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "no-man-s-sky"
+    },
+    {
+      "id": "jogo-mais-impactante",
+      "title": "Jogo Mais Impactante",
+      "nominees": [
+        {
+          "id": "tell-me-why",
+          "name": "Tell Me Why",
+          "details": "Dontnod Entertainment/Xbox Game Studios",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "if-found",
+          "name": "If Found...",
+          "details": "Dreamfeel/Annapurna Interactive",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "kentucky-route-zero",
+          "name": "Kentucky Route Zero",
+          "details": "Cardboard Computer/Annapurna Interactive",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "spiritfarer",
+          "name": "Spiritfarer",
+          "details": "Thunder Lotus Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "through-the-darkness-of-times",
+          "name": "Through the Darkness of Times",
+          "details": "Paintbucket Games/HandyGames",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "tell-me-why"
+    },
+    {
+      "id": "melhor-jogo-independente",
+      "title": "Melhor Jogo Independente",
+      "nominees": [
+        {
+          "id": "hades",
+          "name": "Hades",
+          "details": "Supergiant Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "carrion",
+          "name": "Carrion",
+          "details": "Phobia Game Studio/Devolver Digital",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fall-guys",
+          "name": "Fall Guys",
+          "details": "Mediatonic/Devolver Digital",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "spelunky-2",
+          "name": "Spelunky 2",
+          "details": "Mossmouth",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "spiritfarer",
+          "name": "Spiritfarer",
+          "details": "Thunder Lotus Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "hades"
+    },
+    {
+      "id": "melhor-jogo-mobile",
+      "title": "Melhor Jogo Mobile",
+      "nominees": [
+        {
+          "id": "among-us",
+          "name": "Among Us",
+          "details": "InnerSloth",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-mobile",
+          "name": "Call of Duty: Mobile",
+          "details": "TiMi Studios/Activision",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "genshin-impact",
+          "name": "Genshin Impact",
+          "details": "miHoYo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "legends-of-runeterra",
+          "name": "Legends of Runeterra",
+          "details": "Riot Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "pokemon-cafe-mix",
+          "name": "Pokémon Café Mix",
+          "details": "Genius Sonority/The Pokémon Company",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "among-us"
+    },
+    {
+      "id": "melhor-jogo-de-vr-ar",
+      "title": "Melhor Jogo de VR/AR",
+      "nominees": [
+        {
+          "id": "half-life-alyx",
+          "name": "Half-Life: Alyx",
+          "details": "Valve",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "dreams",
+          "name": "Dreams",
+          "details": "Media Molecule/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "iron-man-vr",
+          "name": "Iron Man VR",
+          "details": "Camouflaj/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "star-wars-squadrons",
+          "name": "Star Wars Squadrons",
+          "details": "Motive Studios/Electronic Arts",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-walking-dead-saints-sinners",
+          "name": "The Walking Dead: Saints & Sinners",
+          "details": "Skydance Interactive",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "half-life-alyx"
+    },
+    {
+      "id": "melhor-jogo-de-acao",
+      "title": "Melhor Jogo de Ação",
+      "nominees": [
+        {
+          "id": "hades",
+          "name": "Hades",
+          "details": "Supergiant Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "doom-eternal",
+          "name": "Doom Eternal",
+          "details": "id Software/Bethesda Softworks",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "half-life-alyx",
+          "name": "Half-Life: Alyx",
+          "details": "Valve",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nioh-2",
+          "name": "Nioh 2",
+          "details": "Team Ninja",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "streets-of-rage-4",
+          "name": "Streets of Rage 4",
+          "details": "Dotemu",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "hades"
+    },
+    {
+      "id": "melhor-jogo-de-acao-aventura",
+      "title": "Melhor Jogo de Ação-aventura",
+      "nominees": [
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Naughty Dog/Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "assassin-s-creed-valhalla",
+          "name": "Assassin's Creed Valhalla",
+          "details": "Ubisoft",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ghost-of-tsushima",
+          "name": "Ghost of Tsushima",
+          "details": "Sucker Punch Productions/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "spider-man-miles-morales",
+          "name": "Spider-Man: Miles Morales",
+          "details": "Insomniac Games/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "ori-and-the-will-of-the-wisps",
+          "name": "Ori and the Will of the Wisps",
+          "details": "Moon Studios/Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "star-wars-jedi-fallen-order",
+          "name": "Star Wars Jedi: Fallen Order",
+          "details": "Respawn Entertainment/Electronic Arts",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-last-of-us-part-ii"
+    },
+    {
+      "id": "melhor-jogo-de-rpg",
+      "title": "Melhor Jogo de RPG",
+      "nominees": [
+        {
+          "id": "final-fantasy-vii-remake",
+          "name": "Final Fantasy VII Remake",
+          "details": "Square Enix",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "genshin-impact",
+          "name": "Genshin Impact",
+          "details": "miHoYo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "persona-5-royal",
+          "name": "Persona 5 Royal",
+          "details": "P-Studio/Sega",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "wasteland-3",
+          "name": "Wasteland 3",
+          "details": "inXile Entertainment/Deep Silver",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "yakuza-like-a-dragon",
+          "name": "Yakuza: Like a Dragon",
+          "details": "Ryu Ga Gotoku Studio/Sega",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "final-fantasy-vii-remake"
+    },
+    {
+      "id": "melhor-jogo-de-luta",
+      "title": "Melhor Jogo de Luta",
+      "nominees": [
+        {
+          "id": "mortal-kombat-11-ultimate-edition",
+          "name": "Mortal Kombat 11: Ultimate Edition",
+          "details": "NetherRealm Studios/WB Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "granblue-fantasy-versus",
+          "name": "Granblue Fantasy Versus",
+          "details": "Arc System Works/Cygames/Xseed Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "street-fighter-v-champion-edition",
+          "name": "Street Fighter V Champion Edition",
+          "details": "Dimps/Capcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "one-punch-man-a-hero-nobody-knows",
+          "name": "One-Punch Man: A Hero Nobody Knows",
+          "details": "Spike Chunsoft/Bandai Namco",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "under-night-in-birth-exe-late",
+          "name": "Under Night In-Birth Exe:Late",
+          "details": "French Bread/Arc System Works/Aksys",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "mortal-kombat-11-ultimate-edition"
+    },
+    {
+      "id": "melhor-jogo-para-familia",
+      "title": "Melhor Jogo para Família",
+      "nominees": [
+        {
+          "id": "animal-crossing-new-horizons",
+          "name": "Animal Crossing: New Horizons",
+          "details": "Nintendo",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "crash-bandicoot-4-it-s-about-time",
+          "name": "Crash Bandicoot 4: It's About Time",
+          "details": "Toys for Bob/Activision",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fall-guys",
+          "name": "Fall Guys",
+          "details": "Mediatonic/Devolver Digital",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mario-kart-live-home-circuit",
+          "name": "Mario Kart Live: Home Circuit",
+          "details": "Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "minecraft-dungeons",
+          "name": "Minecraft Dungeons",
+          "details": "Mojang Studios/Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "paper-mario-the-origami-king",
+          "name": "Paper Mario: The Origami King",
+          "details": "Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "animal-crossing-new-horizons"
+    },
+    {
+      "id": "melhor-jogo-de-simulacao-estrategia",
+      "title": "Melhor Jogo de Simulação/Estratégia",
+      "nominees": [
+        {
+          "id": "microsoft-flight-simulator",
+          "name": "Microsoft Flight Simulator",
+          "details": "Asobo Studio/Xbox Game Studios",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "crusader-kings-iii",
+          "name": "Crusader Kings III",
+          "details": "Paradox Interactive",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "desperados-iii",
+          "name": "Desperados III",
+          "details": "Mimimi Games/THQ Nordic",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "gears-tactics",
+          "name": "Gears Tactics",
+          "details": "Splash Damage/The Coalition/Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "xcom-chimera-squad",
+          "name": "XCOM: Chimera Squad",
+          "details": "Firaxis Games/2K Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "microsoft-flight-simulator"
+    },
+    {
+      "id": "melhor-jogo-de-esporte-corrida",
+      "title": "Melhor Jogo de Esporte/Corrida",
+      "nominees": [
+        {
+          "id": "tony-hawk-s-pro-skater-1-2",
+          "name": "Tony Hawk's Pro Skater 1 + 2",
+          "details": "Vicarious Visions/Activision",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "dirt-5",
+          "name": "Dirt 5",
+          "details": "Codemasters",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "f1-2020",
+          "name": "F1 2020",
+          "details": "Codemasters",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nba-2k21",
+          "name": "NBA 2K21",
+          "details": "2K",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fifa-21",
+          "name": "FIFA 21",
+          "details": "EA Vancouver/EA Sports",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "tony-hawk-s-pro-skater-1-2"
+    },
+    {
+      "id": "melhor-jogo-multiplayer",
+      "title": "Melhor Jogo Multiplayer",
+      "nominees": [
+        {
+          "id": "among-us",
+          "name": "Among Us",
+          "details": "InnerSloth",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "animal-crossing-new-horizons",
+          "name": "Animal Crossing: New Horizons",
+          "details": "Nintendo",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "call-of-duty-warzone",
+          "name": "Call of Duty: Warzone",
+          "details": "Infinity Ward/Raven Software/Activision",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fall-guys",
+          "name": "Fall Guys",
+          "details": "Mediatonic/Devolver Digital",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "valorant",
+          "name": "Valorant",
+          "details": "Riot Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "among-us"
+    },
+    {
+      "id": "melhor-estreia-independente",
+      "title": "Melhor Estreia Independente",
+      "nominees": [
+        {
+          "id": "phasmophobia",
+          "name": "Phasmophobia",
+          "details": "Kinetic Games",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "carrion",
+          "name": "Carrion",
+          "details": "Phobia Game Studio/Devolver Digital",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "mortal-shell",
+          "name": "Mortal Shell",
+          "details": "Cold Symmetry/Playstack",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "raji-an-ancient-epic",
+          "name": "Raji: An Ancient Epic",
+          "details": "Nodding Heads Games/Super.com",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "roki",
+          "name": "Röki",
+          "details": "Polygon Treehouse/United Label",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "phasmophobia"
+    },
+    {
+      "id": "melhor-suporte-a-comunidade",
+      "title": "Melhor Suporte à Comunidade",
+      "nominees": [
+        {
+          "id": "fall-guys",
+          "name": "Fall Guys",
+          "details": "Mediatonic/Devolver Digital",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "apex-legends",
+          "name": "Apex Legends",
+          "details": "Respawn Entertainment/Electronic Arts",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "destiny-2",
+          "name": "Destiny 2",
+          "details": "Bungie",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "fortnite",
+          "name": "Fortnite",
+          "details": "Epic Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "no-man-s-sky",
+          "name": "No Man's Sky",
+          "details": "Hello Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "valorant",
+          "name": "Valorant",
+          "details": "Riot Games",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "fall-guys"
+    },
+    {
+      "id": "inovacao-em-acessibilidade",
+      "title": "Inovação em Acessibilidade",
+      "nominees": [
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Naughty Dog/Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "assassin-s-creed-valhalla",
+          "name": "Assassin's Creed Valhalla",
+          "details": "Ubisoft",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "grounded",
+          "name": "Grounded",
+          "details": "Obsidian Entertainment/Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hyperdot",
+          "name": "Hyperdot",
+          "details": "Tribe Games/Glitch",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "watch-dogs-legion",
+          "name": "Watch Dogs: Legion",
+          "details": "Ubisoft",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "the-last-of-us-part-ii"
+    },
+    {
+      "id": "criador-de-conteudo-do-ano",
+      "title": "Criador de Conteúdo do Ano",
+      "nominees": [
+        {
+          "id": "rachell-valkyrae-hofstetter",
+          "name": "Rachell \"Valkyrae\" Hofstetter",
+          "details": null,
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "alanah-pearce",
+          "name": "Alanah Pearce",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "jay-ann-lopez",
+          "name": "Jay-Ann Lopez",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "nick-nickmercs-kolcheff",
+          "name": "Nick \"NICKMERCS\" Kolcheff",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "timothy-timthetatman-betar",
+          "name": "Timothy \"TimTheTatman\" Betar",
+          "details": null,
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "rachell-valkyrae-hofstetter"
+    },
+    {
+      "id": "jogo-mais-aguardado",
+      "title": "Jogo Mais Aguardado",
+      "nominees": [
+        {
+          "id": "elden-ring",
+          "name": "Elden Ring",
+          "details": "FromSoftware/Bandai Namco Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "sequencia-de-god-of-war",
+          "name": "Sequência de God of War",
+          "details": "Santa Monica Studio/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "halo-infinite",
+          "name": "Halo Infinite",
+          "details": "343 Industries/Xbox Game Studios",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "horizon-forbidden-west",
+          "name": "Horizon Forbidden West",
+          "details": "Guerrilla Games/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "resident-evil-village",
+          "name": "Resident Evil Village",
+          "details": "Capcom",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "sequencia-de-the-legend-of-zelda-breath-of-the-wild",
+          "name": "Sequência de The Legend of Zelda: Breath of the Wild",
+          "details": "Nintendo",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "elden-ring"
+    },
+    {
+      "id": "voz-dos-jogadores",
+      "title": "Voz dos Jogadores",
+      "nominees": [
+        {
+          "id": "ghost-of-tsushima",
+          "name": "Ghost of Tsushima",
+          "details": "Sucker Punch Productions/Sony Interactive Entertainment",
+          "winner": true,
+          "image_url": null
+        },
+        {
+          "id": "doom-eternal",
+          "name": "Doom Eternal",
+          "details": "id Software/Bethesda Softworks",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "hades",
+          "name": "Hades",
+          "details": "Supergiant Games",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "spider-man-miles-morales",
+          "name": "Spider-Man: Miles Morales",
+          "details": "Insomniac Games/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        },
+        {
+          "id": "the-last-of-us-part-ii",
+          "name": "The Last of Us Part II",
+          "details": "Naughty Dog/Sony Interactive Entertainment",
+          "winner": false,
+          "image_url": null
+        }
+      ],
+      "winner_id": "ghost-of-tsushima"
+    }
+  ]
+}

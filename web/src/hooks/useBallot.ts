@@ -59,7 +59,7 @@ export function useBallot(edition: Edition | null, user: User | null) {
         for (const [catId, nomId] of Object.entries(localVotes)) {
           if (!merged[catId]) {
             merged[catId] = nomId;
-            if (edition?.status === 'open') {
+            if (edition?.status === 'open' || edition?.status === 'concluded') {
               pendingUpload.push({
                 user_id: user.id,
                 year,
@@ -99,8 +99,8 @@ export function useBallot(edition: Edition | null, user: User | null) {
 
   const setVote = async (categoryId: string, nomineeId: string) => {
     if (!year || !storageKey) return;
-    if (edition?.status !== 'open') {
-      setSyncError('Este bolão está fechado para alterações.');
+    if (edition?.status === 'locked') {
+      setSyncError('A votação desta edição está congelada durante a transmissão da cerimônia.');
       return;
     }
     const previous = votes;
@@ -125,14 +125,14 @@ export function useBallot(edition: Edition | null, user: User | null) {
       setVotes(previous);
       try { localStorage.setItem(storageKey, JSON.stringify(previous)); }
       catch {}
-      setSyncError(error.message.includes('row-level security') ? 'Este bolão está fechado para alterações.' : 'Não foi possível salvar seu palpite.');
+      setSyncError(error.message.includes('row-level security') ? 'Este bolão não está aceitando palpites no momento.' : 'Não foi possível salvar seu palpite.');
     }
   };
 
   const clearVotes = async () => {
     if (!year || !storageKey) return;
-    if (edition?.status !== 'open') {
-      setSyncError('Este bolão está fechado para alterações.');
+    if (edition?.status === 'locked') {
+      setSyncError('A votação desta edição está congelada durante a transmissão da cerimônia.');
       return;
     }
     const previous = votes;
