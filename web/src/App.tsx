@@ -30,7 +30,7 @@ export const App: React.FC = () => {
     error
   } = useEditions();
 
-  const { configured, loading: authLoading, user, sendMagicLink, signOut } = useAuth();
+  const { configured, loading: authLoading, user, sendMagicLink, signInWithOAuth, signOut } = useAuth();
   const databaseStatus = useEditionLifecycle(currentEdition?.year, currentEdition?.status);
   const activeEdition = currentEdition && databaseStatus
     ? { ...currentEdition, status: databaseStatus }
@@ -135,6 +135,7 @@ export const App: React.FC = () => {
                   loading={authLoading}
                   email={user?.email}
                   onSendMagicLink={sendMagicLink}
+                  onSignInWithOAuth={signInWithOAuth}
                   onSignOut={signOut}
                 />
                 {configured && !user && (

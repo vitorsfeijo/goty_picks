@@ -12,7 +12,7 @@ regras de acesso.
   pessoais após a cerimônia.
 - Persistência local para visitantes e sincronização entre dispositivos para
   pessoas autenticadas.
-- Login sem senha por link enviado por e-mail (magic link).
+- Login social com Google, Discord e GitHub (1 clique) ou por magic link via e-mail.
 - Banco PostgreSQL com migrations, RLS, deadline de votação, resultados e RPCs
   para distribuição comunitária e leaderboard.
 
@@ -90,17 +90,31 @@ uma referência histórica. A implementação ativa está em
 
 ### Autenticação local e hospedada
 
-O projeto usa magic link por e-mail. Para desenvolvimento local, o Supabase
-exibe os e-mails no Mailpit da stack local. No projeto hospedado, habilite o
-provedor de e-mail e configure SMTP antes do lançamento.
+O projeto oferece quatro opções de login:
 
-Em **Authentication → URL Configuration** do projeto hospedado, inclua:
+- **Google** — 1 clique via OAuth.
+- **Discord** — 1 clique via OAuth.
+- **GitHub** — 1 clique via OAuth.
+- **Magic link** — link de acesso enviado por e-mail (fallback).
 
-- `http://localhost:3000`
-- a URL final do GitHub Pages
+Para desenvolvimento local, o Supabase exibe os e-mails no Mailpit da stack
+local. No projeto hospedado:
 
-Isso permite que o usuário retorne à aplicação depois de abrir o link de
-acesso recebido por e-mail.
+1. Vá em **Authentication → Providers** no painel do Supabase.
+2. Habilite **Google**, **Discord** e **GitHub**, preenchendo Client ID e
+   Client Secret obtidos no console de cada provedor.
+3. Em **Authentication → URL Configuration**, inclua as URLs de redirect
+   permitidas:
+
+   - `http://localhost:3000`
+   - a URL final do GitHub Pages (ex: `https://vitorsfeijo.github.io/goty_picks/`)
+
+### Edge Functions (future work)
+
+O diretório `supabase/functions/` está reservado para Edge Functions conforme
+a [arquitetura](ARCHITECTURE.md). Nenhuma função está implementada ainda. Veja
+[supabase/functions/README.md](supabase/functions/README.md) para ideias de
+implementações futuras e instruções de criação.
 
 ## Executar o scraper
 

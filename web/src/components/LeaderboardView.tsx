@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Trophy, Search, Users, Sparkles, Loader2, Clock } from 'lucide-react';
 import { useLeaderboard } from '../hooks/useLeaderboard';
+import { ProfileAvatar } from './ProfileAvatar';
 import type { EditionStatus } from '../types';
 
 interface LeaderboardViewProps {
@@ -164,11 +165,17 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
                     {medalStyles.label}
                   </span>
 
-                  <div className={`w-14 h-14 rounded-full flex items-center justify-center font-black text-xl mb-3 shadow-md ${medalStyles.badge}`}>
+                  <div className={`w-14 h-14 rounded-full flex items-center justify-center font-black text-xl mb-1 shadow-md ${medalStyles.badge}`}>
                     #{player.rank}
                   </div>
 
-                  <h4 className="font-bold text-base text-white truncate max-w-[180px]">
+                  <ProfileAvatar
+                    displayName={player.displayName}
+                    avatarUrl={player.avatarUrl}
+                    size="w-10 h-10"
+                  />
+
+                  <h4 className="font-bold text-base text-white truncate max-w-[180px] mt-1">
                     {player.displayName}
                   </h4>
 
@@ -258,6 +265,10 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
                     <td className="py-3.5 px-3">
                       <div className="flex items-center gap-2">
+                        <ProfileAvatar
+                          displayName={entry.displayName}
+                          avatarUrl={entry.avatarUrl}
+                        />
                         <span className="text-slate-200 font-semibold">
                           {entry.displayName}
                         </span>

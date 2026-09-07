@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { Session } from '@supabase/supabase-js';
+import type { Session, Provider } from '@supabase/supabase-js';
 import { isSupabaseConfigured, supabase } from '../lib/supabase';
 
 export function useAuth() {
@@ -42,6 +42,17 @@ export function useAuth() {
     return { error: error?.message };
   };
 
+  const signInWithOAuth = async (provider: Provider) => {
+    if (!supabase) return { error: 'Supabase ainda não está configurado.' };
+
+    const redirectTo = `${window.location.origin}${window.location.pathname}`;
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: { redirectTo }
+    });
+    return { error: error?.message };
+  };
+
   const signOut = async () => {
     if (!supabase) return;
     const { error } = await supabase.auth.signOut();
@@ -53,6 +64,7 @@ export function useAuth() {
     loading,
     user: session?.user ?? null,
     sendMagicLink,
+    signInWithOAuth,
     signOut
   };
 }
