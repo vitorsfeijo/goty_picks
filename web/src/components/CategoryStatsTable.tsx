@@ -21,7 +21,6 @@ export const CategoryStatsTable: React.FC<CategoryStatsTableProps> = ({
     () => computeCommunityStats(edition, realDistribution),
     [edition, realDistribution]
   );
-  const isRealData = Boolean(realDistribution && realDistribution.length > 0);
 
   const filteredCategories = useMemo(() => {
     if (!search.trim()) return stats.categories;
@@ -42,46 +41,63 @@ export const CategoryStatsTable: React.FC<CategoryStatsTableProps> = ({
     <div className="space-y-8">
       {/* Highlight Cards: Consenso vs Zebra */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        
-        {/* 1. Maior Consenso */}
-        {stats.mostAccurateCategory && (
-          <div className="rounded-2xl bg-gradient-to-br from-emerald-500/15 via-slate-900 to-slate-950 border border-emerald-500/30 p-5 shadow-xl">
-            <div className="flex items-center justify-between mb-3">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                <Target className="w-3.5 h-3.5" />
-                Mais Acertada
-              </span>
-              <span className="text-xl font-black text-emerald-400">
-                {stats.mostAccurateCategory.correctPercentage}%
-              </span>
-            </div>
-            <h4 className="font-cinzel font-bold text-slate-100 text-base line-clamp-1">
-              {stats.mostAccurateCategory.categoryTitle}
-            </h4>
-            <p className="text-xs text-slate-400 mt-1">
-              🏆 <strong className="text-emerald-300">{stats.mostAccurateCategory.winnerName}</strong> foi o grande favorito da comunidade.
-            </p>
-          </div>
-        )}
+        {stats.totalParticipants > 0 ? (
+          <>
+            {/* 1. Maior Consenso */}
+            {stats.mostAccurateCategory && (
+              <div className="rounded-2xl bg-gradient-to-br from-emerald-500/15 via-slate-900 to-slate-950 border border-emerald-500/30 p-5 shadow-xl">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    <Target className="w-3.5 h-3.5" />
+                    Mais Acertada
+                  </span>
+                  <span className="text-xl font-black text-emerald-400">
+                    {stats.mostAccurateCategory.correctPercentage}%
+                  </span>
+                </div>
+                <h4 className="font-cinzel font-bold text-slate-100 text-base line-clamp-1">
+                  {stats.mostAccurateCategory.categoryTitle}
+                </h4>
+                <p className="text-xs text-slate-400 mt-1">
+                  🏆 <strong className="text-emerald-300">{stats.mostAccurateCategory.winnerName}</strong> foi o grande favorito da comunidade.
+                </p>
+              </div>
+            )}
 
-        {/* 2. Maior Zebra */}
-        {stats.leastAccurateCategory && (
-          <div className="rounded-2xl bg-gradient-to-br from-rose-500/15 via-slate-900 to-slate-950 border border-rose-500/30 p-5 shadow-xl">
-            <div className="flex items-center justify-between mb-3">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/30">
-                <Zap className="w-3.5 h-3.5" />
-                Maior Zebra
-              </span>
-              <span className="text-xl font-black text-rose-400">
-                Apenas {stats.leastAccurateCategory.correctPercentage}%
-              </span>
+            {/* 2. Maior Zebra */}
+            {stats.leastAccurateCategory && (
+              <div className="rounded-2xl bg-gradient-to-br from-rose-500/15 via-slate-900 to-slate-950 border border-rose-500/30 p-5 shadow-xl">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/30">
+                    <Zap className="w-3.5 h-3.5" />
+                    Maior Zebra
+                  </span>
+                  <span className="text-xl font-black text-rose-400">
+                    Apenas {stats.leastAccurateCategory.correctPercentage}%
+                  </span>
+                </div>
+                <h4 className="font-cinzel font-bold text-slate-100 text-base line-clamp-1">
+                  {stats.leastAccurateCategory.categoryTitle}
+                </h4>
+                <p className="text-xs text-slate-400 mt-1">
+                  🏆 <strong className="text-rose-300">{stats.leastAccurateCategory.winnerName}</strong> surpreendeu a maioria dos participantes!
+                </p>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="md:col-span-2 rounded-2xl bg-slate-900/60 border border-slate-800 p-5 flex items-center gap-4">
+            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 shrink-0">
+              <Trophy className="w-6 h-6" />
             </div>
-            <h4 className="font-cinzel font-bold text-slate-100 text-base line-clamp-1">
-              {stats.leastAccurateCategory.categoryTitle}
-            </h4>
-            <p className="text-xs text-slate-400 mt-1">
-              🏆 <strong className="text-rose-300">{stats.leastAccurateCategory.winnerName}</strong> surpreendeu a maioria dos participantes!
-            </p>
+            <div>
+              <h4 className="font-cinzel font-bold text-slate-200 text-sm">
+                Aguardando votos da comunidade
+              </h4>
+              <p className="text-xs text-slate-400 mt-1">
+                Conforme você e outros participantes autenticados salvarem seus palpites, as estatísticas de consenso e zebras aparecerão aqui em tempo real.
+              </p>
+            </div>
           </div>
         )}
 
@@ -90,7 +106,7 @@ export const CategoryStatsTable: React.FC<CategoryStatsTableProps> = ({
           <div className="flex items-center justify-between mb-3">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
               <Users className="w-3.5 h-3.5" />
-              {isRealData ? 'Supabase Live' : 'Comunidade'}
+              Supabase Live
             </span>
             <span className="text-xl font-black text-amber-400">
               {stats.totalParticipants.toLocaleString()}
@@ -100,9 +116,7 @@ export const CategoryStatsTable: React.FC<CategoryStatsTableProps> = ({
             Total de Palpites
           </h4>
           <p className="text-xs text-slate-400 mt-1">
-            {isRealData
-              ? 'Votos sincronizados e computados no banco de dados.'
-              : `Estimativa de palpites computados na edição de ${edition.year}.`}
+            Votos sincronizados e computados no banco de dados.
           </p>
         </div>
       </div>
