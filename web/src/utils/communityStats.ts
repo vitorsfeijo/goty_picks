@@ -25,8 +25,8 @@ export interface CategoryStat {
 export interface CommunityYearStats {
   totalParticipants: number;
   categories: CategoryStat[];
-  mostAccurateCategory: CategoryStat;
-  leastAccurateCategory: CategoryStat; // "A Maior Zebra"
+  mostAccurateCategory: CategoryStat | null;
+  leastAccurateCategory: CategoryStat | null; // "A Maior Zebra"
   highestConsensusPick: { categoryTitle: string; nomineeName: string; percentage: number };
   biggestUpset: { categoryTitle: string; predictedName: string; predictedPct: number; winnerName: string; winnerPct: number } | null;
 }
@@ -112,13 +112,13 @@ export function computeCommunityStats(
     });
 
     const sortedByAccuracy = [...categoryStats].sort((a, b) => b.correctPercentage - a.correctPercentage);
-    const mostAccurateCategory = sortedByAccuracy[0];
-    const leastAccurateCategory = sortedByAccuracy[sortedByAccuracy.length - 1];
+    const mostAccurateCategory = sortedByAccuracy[0] ?? null;
+    const leastAccurateCategory = sortedByAccuracy.length > 0 ? sortedByAccuracy[sortedByAccuracy.length - 1] : null;
 
     const highestConsensusPick = {
       categoryTitle: mostAccurateCategory?.categoryTitle ?? '',
-      nomineeName: mostAccurateCategory?.topVotedNominee.nomineeName ?? '',
-      percentage: mostAccurateCategory?.topVotedNominee.percentage ?? 0
+      nomineeName: mostAccurateCategory?.topVotedNominee?.nomineeName ?? '',
+      percentage: mostAccurateCategory?.topVotedNominee?.percentage ?? 0
     };
 
     const upsetCategories = categoryStats.filter((c) => c.isUpset);
@@ -129,8 +129,8 @@ export function computeCommunityStats(
       const winDist = u.distribution.find((d) => d.isWinner);
       biggestUpset = {
         categoryTitle: u.categoryTitle,
-        predictedName: u.topVotedNominee.nomineeName,
-        predictedPct: u.topVotedNominee.percentage,
+        predictedName: u.topVotedNominee?.nomineeName ?? '',
+        predictedPct: u.topVotedNominee?.percentage ?? 0,
         winnerName: u.winnerName || '',
         winnerPct: winDist ? winDist.percentage : 0
       };

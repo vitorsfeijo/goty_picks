@@ -170,7 +170,8 @@ export async function generateBallotCanvas(
 
     const voteId = votes[cat.id];
     const nominee = cat.nominees.find((n) => n.id === voteId);
-    const isWinner = cat.winner_id && cat.winner_id === voteId;
+    const winnerId = cat.winner_id || cat.nominees.find((n) => n.winner)?.id;
+    const isWinner = Boolean(winnerId && winnerId === voteId);
 
     // Card background
     ctx.fillStyle = 'rgba(15, 23, 42, 0.75)';

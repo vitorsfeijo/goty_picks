@@ -13,7 +13,9 @@ export function useEditions() {
     async function loadEditions() {
       try {
         setLoading(true);
-        const res = await fetch('./data/editions.json');
+        const baseUrl = import.meta.env.BASE_URL || './';
+        const dataBaseUrl = baseUrl.endsWith('/') ? `${baseUrl}data/` : `${baseUrl}/data/`;
+        const res = await fetch(`${dataBaseUrl}editions.json`);
         if (!res.ok) {
           throw new Error(`Failed to load editions manifest (${res.status})`);
         }
@@ -42,7 +44,9 @@ export function useEditions() {
     async function loadNominees() {
       try {
         setLoading(true);
-        const res = await fetch(`./data/${selectedYear}/nominees.json`);
+        const baseUrl = import.meta.env.BASE_URL || './';
+        const dataBaseUrl = baseUrl.endsWith('/') ? `${baseUrl}data/` : `${baseUrl}/data/`;
+        const res = await fetch(`${dataBaseUrl}${selectedYear}/nominees.json`);
         if (!res.ok) {
           throw new Error(`Edição ${selectedYear} não encontrada (${res.status})`);
         }

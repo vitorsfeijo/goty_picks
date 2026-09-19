@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useEditions } from './hooks/useEditions';
 import { useBallot } from './hooks/useBallot';
 import { useAuth } from './hooks/useAuth';
+import { useProfile } from './hooks/useProfile';
 import { useEditionLifecycle } from './hooks/useEditionLifecycle';
 import { Navbar } from './components/Navbar';
 import { AuthButton } from './components/AuthButton';
@@ -31,6 +32,7 @@ export const App: React.FC = () => {
   } = useEditions();
 
   const { configured, loading: authLoading, user, sendMagicLink, signInWithOAuth, signOut } = useAuth();
+  const { profile } = useProfile(user);
   const databaseStatus = useEditionLifecycle(currentEdition?.year, currentEdition?.status);
   const activeEdition = currentEdition && databaseStatus
     ? { ...currentEdition, status: databaseStatus }
@@ -159,7 +161,7 @@ export const App: React.FC = () => {
                   progressPercentage={progressPercentage}
                   onClear={clearVotes}
                   saveStatus={saveStatus}
-                  displayName={user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email?.split('@')[0] || 'Jogador'}
+                  displayName={profile?.displayName || user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email?.split('@')[0] || 'Jogador'}
                   score={score}
                 />
 

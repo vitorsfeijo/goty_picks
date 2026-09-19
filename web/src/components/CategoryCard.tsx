@@ -25,8 +25,9 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   // The official winner is only shown if the user voted in this category OR if revealAll is true
   const showWinner = isConcluded && (hasVote || revealAll);
 
-  const userGuessedCorrectly = showWinner && hasVote && selectedNomineeId === category.winner_id;
-  const userGuessedWrong = showWinner && hasVote && selectedNomineeId !== category.winner_id;
+  const winnerId = category.winner_id || category.nominees.find((n) => n.winner)?.id;
+  const userGuessedCorrectly = showWinner && hasVote && selectedNomineeId === winnerId;
+  const userGuessedWrong = showWinner && hasVote && selectedNomineeId !== winnerId;
 
   // Sort nominees alphabetically by name (A-Z)
   const sortedNominees = useMemo(() => {
@@ -102,7 +103,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
             isSelected={selectedNomineeId === nominee.id}
             onSelect={() => onVote(category.id, nominee.id)}
             isConcluded={isConcluded}
-            isOfficialWinner={nominee.winner || category.winner_id === nominee.id}
+            isOfficialWinner={nominee.winner || (Boolean(winnerId) && winnerId === nominee.id)}
             userVotedThis={selectedNomineeId === nominee.id}
             showWinner={showWinner}
             isVotingOpen={isVotingOpen}

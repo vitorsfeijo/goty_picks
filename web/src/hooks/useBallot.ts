@@ -66,7 +66,7 @@ export function useBallot(edition: Edition | null, user: User | null) {
         for (const [catId, nomId] of Object.entries(localVotes)) {
           if (!merged[catId]) {
             merged[catId] = nomId;
-            if (edition?.status === 'open' || edition?.status === 'concluded') {
+            if (edition?.status !== 'locked') {
               pendingUpload.push({
                 user_id: user.id,
                 year,
@@ -182,9 +182,10 @@ export function useBallot(edition: Edition | null, user: User | null) {
     let correct = 0;
     let evaluated = 0;
     for (const category of edition.categories) {
-      if (category.winner_id) {
+      const winnerId = category.winner_id || category.nominees.find((n) => n.winner)?.id;
+      if (winnerId) {
         evaluated++;
-        if (votes[category.id] === category.winner_id) correct++;
+        if (votes[category.id] === winnerId) correct++;
       }
     }
     return { correct, evaluated, total: totalCategories, percentage: evaluated > 0 ? Math.round((correct / evaluated) * 100) : 0 };
