@@ -45,7 +45,8 @@ export const App: React.FC = () => {
     progressPercentage,
     score,
     syncing,
-    syncError
+    syncError,
+    saveStatus
   } = useBallot(activeEdition, user);
 
   const [activeTab, setActiveTab] = useState<'ballot' | 'stats' | 'leaderboard'>(getInitialTab);
@@ -157,41 +158,46 @@ export const App: React.FC = () => {
                   totalCategories={totalCategories}
                   progressPercentage={progressPercentage}
                   onClear={clearVotes}
+                  saveStatus={saveStatus}
+                  displayName={user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email?.split('@')[0] || 'Jogador'}
+                  score={score}
                 />
 
                 {/* Search Bar & Spoiler Toggle */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto mb-6">
-                  <div className="relative w-full sm:flex-1">
-                    <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                    <input
-                      type="text"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Filtrar por categoria ou jogo..."
-                      className="w-full bg-slate-900/80 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-400/80 transition-all"
-                    />
-                  </div>
+                {activeEdition && activeEdition.categories.length > 0 && (
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto mb-6">
+                    <div className="relative w-full sm:flex-1">
+                      <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                      <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="Filtrar por categoria ou jogo..."
+                        className="w-full bg-slate-900/80 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-400/80 transition-all"
+                      />
+                    </div>
 
-                  {activeEdition?.status === 'concluded' && (
-                    <button
-                      type="button"
-                      onClick={() => setRevealAllSpoilers(!revealAllSpoilers)}
-                      className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900/90 text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-all cursor-pointer shadow-sm"
-                    >
-                      {revealAllSpoilers ? (
-                        <>
-                          <EyeOff className="w-3.5 h-3.5 text-amber-400" />
-                          Modo Anti-Spoiler (Ocultar Vencedores)
-                        </>
-                      ) : (
-                        <>
-                          <Eye className="w-3.5 h-3.5 text-amber-400" />
-                          Revelar Todos os Vencedores
-                        </>
-                      )}
-                    </button>
-                  )}
-                </div>
+                    {activeEdition?.status === 'concluded' && (
+                      <button
+                        type="button"
+                        onClick={() => setRevealAllSpoilers(!revealAllSpoilers)}
+                        className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900/90 text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-all cursor-pointer shadow-sm"
+                      >
+                        {revealAllSpoilers ? (
+                          <>
+                            <EyeOff className="w-3.5 h-3.5 text-amber-400" />
+                            Modo Anti-Spoiler (Ocultar Vencedores)
+                          </>
+                        ) : (
+                          <>
+                            <Eye className="w-3.5 h-3.5 text-amber-400" />
+                            Revelar Todos os Vencedores
+                          </>
+                        )}
+                      </button>
+                    )}
+                  </div>
+                )}
 
                 {/* Categories List */}
                 <div className="space-y-6">
@@ -208,8 +214,27 @@ export const App: React.FC = () => {
                   ))}
 
                   {filteredCategories.length === 0 && (
-                    <div className="text-center py-16 text-slate-500 text-sm">
-                      Nenhuma categoria encontrada com "{searchQuery}".
+                    <div className="text-center py-12 px-4 max-w-xl mx-auto">
+                      {activeEdition?.categories.length === 0 ? (
+                        <div className="bg-slate-900/70 border border-slate-800 rounded-3xl p-8 sm:p-10 space-y-4 shadow-xl">
+                          <span className="text-4xl block">🎮</span>
+                          <h4 className="font-cinzel text-xl font-bold text-slate-200">
+                            Indicados de {activeEdition.year} em Breve
+                          </h4>
+                          <p className="text-sm text-slate-400 leading-relaxed">
+                            Os indicados oficiais do The Game Awards {activeEdition.year} costumam ser revelados em meados de novembro.
+                          </p>
+                          <div className="pt-2 border-t border-slate-800/80">
+                            <p className="text-xs text-amber-400 font-medium">
+                              💡 Enquanto isso, experimente o Modo Retrospectivo navegando pelas edições anteriores (2014 a 2025) no seletor de anos acima!
+                            </p>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="text-slate-500 text-sm py-8">
+                          Nenhuma categoria encontrada com "{searchQuery}".
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>

@@ -14,27 +14,33 @@ function readLocalBallot(storageKey: string | null): UserVotes {
   }
 }
 
+export type SaveStatus = 'idle' | 'saving' | 'saved' | 'error' | 'local';
+
 export function useBallot(edition: Edition | null, user: User | null) {
   const year = edition?.year;
   const storageKey = year ? `goty_picks_ballot_${year}` : null;
   const [votes, setVotes] = useState<UserVotes>({});
   const [syncing, setSyncing] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [saveStatus, setSaveStatus] = useState<SaveStatus>(user ? 'idle' : 'local');
 
   useEffect(() => {
     if (!year) {
       setVotes({});
+      setSaveStatus(user ? 'idle' : 'local');
       return;
     }
     if (!user || !supabase) {
       setVotes(readLocalBallot(storageKey));
       setSyncError(null);
+      setSaveStatus('local');
       return;
     }
 
     let active = true;
     setSyncing(true);
     setSyncError(null);
+    setSaveStatus('saving');
 
     const localVotes = readLocalBallot(storageKey);
 
@@ -45,6 +51,7 @@ export function useBallot(edition: Edition | null, user: User | null) {
           setSyncing(false);
           setSyncError('Não foi possível carregar seus palpites salvos.');
           setVotes(localVotes);
+          setSaveStatus('error');
           return;
         }
 
@@ -83,6 +90,7 @@ export function useBallot(edition: Edition | null, user: User | null) {
         if (!active) return;
         setSyncing(false);
         setVotes(merged);
+        setSaveStatus('saved');
 
         // Keep local cache in sync with merged votes
         if (storageKey) {
@@ -111,11 +119,13 @@ export function useBallot(edition: Edition | null, user: User | null) {
     catch (error) { console.warn('Could not save votes to localStorage:', error); }
 
     if (!user || !supabase) {
+      setSaveStatus('local');
       return;
     }
 
     setSyncing(true);
     setSyncError(null);
+    setSaveStatus('saving');
     const { error } = await supabase.from('votes').upsert(
       { user_id: user.id, year, category_id: categoryId, nominee_id: nomineeId },
       { onConflict: 'user_id,year,category_id' }
@@ -126,6 +136,9 @@ export function useBallot(edition: Edition | null, user: User | null) {
       try { localStorage.setItem(storageKey, JSON.stringify(previous)); }
       catch {}
       setSyncError(error.message.includes('row-level security') ? 'Este bolão não está aceitando palpites no momento.' : 'Não foi possível salvar seu palpite.');
+      setSaveStatus('error');
+    } else {
+      setSaveStatus('saved');
     }
   };
 
@@ -141,11 +154,13 @@ export function useBallot(edition: Edition | null, user: User | null) {
     catch (error) { console.warn('Could not clear votes from localStorage:', error); }
 
     if (!user || !supabase) {
+      setSaveStatus('local');
       return;
     }
 
     setSyncing(true);
     setSyncError(null);
+    setSaveStatus('saving');
     const { error } = await supabase.from('votes').delete().eq('year', year).eq('user_id', user.id);
     setSyncing(false);
     if (error) {
@@ -153,6 +168,9 @@ export function useBallot(edition: Edition | null, user: User | null) {
       try { localStorage.setItem(storageKey, JSON.stringify(previous)); }
       catch {}
       setSyncError('Não foi possível limpar seus palpites.');
+      setSaveStatus('error');
+    } else {
+      setSaveStatus('saved');
     }
   };
 
@@ -172,5 +190,5 @@ export function useBallot(edition: Edition | null, user: User | null) {
     return { correct, evaluated, total: totalCategories, percentage: evaluated > 0 ? Math.round((correct / evaluated) * 100) : 0 };
   }, [edition, votes, totalCategories]);
 
-  return { votes, setVote, clearVotes, totalVoted, totalCategories, progressPercentage, score, syncing, syncError };
+  return { votes, setVote, clearVotes, totalVoted, totalCategories, progressPercentage, score, syncing, syncError, saveStatus };
 }
