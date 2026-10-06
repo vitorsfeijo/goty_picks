@@ -15,11 +15,6 @@ interface ShareModalProps {
   displayName: string;
   totalVoted: number;
   totalCategories: number;
-  score?: {
-    correct: number;
-    evaluated: number;
-    percentage: number;
-  };
 }
 
 export const ShareModal: React.FC<ShareModalProps> = ({
@@ -29,8 +24,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
   votes,
   displayName,
   totalVoted,
-  totalCategories,
-  score
+  totalCategories
 }) => {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [generating, setGenerating] = useState(false);
@@ -51,8 +45,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       votes,
       displayName,
       totalVoted,
-      totalCategories,
-      score
+      totalCategories
     }).then((canvas) => {
       if (!active) return;
       setPreviewUrl(canvas.toDataURL('image/png'));
@@ -62,12 +55,12 @@ export const ShareModal: React.FC<ShareModalProps> = ({
     return () => {
       active = false;
     };
-  }, [isOpen, edition, votes, displayName, totalVoted, totalCategories, score]);
+  }, [isOpen, edition, votes, displayName, totalVoted, totalCategories]);
 
   if (!isOpen) return null;
 
   const handleCopyText = () => {
-    let text = `🏆 Meus Palpites do The Game Awards ${edition.year} no GOTY Picks!\n`;
+    let text = `🏆 Meus favoritos do The Game Awards ${edition.year} no GOTY Picks!\n`;
     text += `Progresso: ${totalVoted}/${totalCategories} categorias preenchidas\n\n`;
 
     edition.categories.forEach((cat) => {
@@ -80,7 +73,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       }
     });
 
-    text += `\nFaça seus palpites também em: https://vitorsfeijo.github.io/goty_picks/`;
+    text += `\nEscolha seus favoritos também em: https://vitorsfeijo.github.io/goty_picks/`;
 
     navigator.clipboard.writeText(text).then(() => {
       setCopiedText(true);
@@ -95,8 +88,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       votes,
       displayName,
       totalVoted,
-      totalCategories,
-      score
+      totalCategories
     });
     setDownloading(false);
   };
@@ -107,8 +99,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       votes,
       displayName,
       totalVoted,
-      totalCategories,
-      score
+      totalCategories
     });
   };
 
@@ -121,17 +112,18 @@ export const ShareModal: React.FC<ShareModalProps> = ({
       />
 
       {/* Modal Dialog */}
-      <div className="relative z-10 w-full max-w-lg rounded-2xl border border-slate-700 bg-slate-950 p-5 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <div role="dialog" aria-modal="true" aria-label="Compartilhar minhas escolhas" className="relative z-10 w-full max-w-lg rounded-2xl border border-slate-700 bg-slate-950 p-5 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
         {/* Header */}
         <div className="flex items-center justify-between pb-3 border-b border-slate-800">
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-amber-400" />
             <h3 className="font-cinzel text-base sm:text-lg font-bold text-white">
-              Compartilhar Bolão
+              Compartilhar minhas escolhas
             </h3>
           </div>
           <button
             type="button"
+            aria-label="Fechar compartilhamento"
             onClick={onClose}
             className="text-slate-400 hover:text-white transition-colors cursor-pointer p-1"
           >
@@ -150,7 +142,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({
             <div className="relative group max-w-[280px] rounded-xl overflow-hidden border border-amber-500/30 shadow-xl shadow-black/60">
               <img
                 src={previewUrl}
-                alt="Card de Compartilhamento do Bolão"
+                alt="Card das suas escolhas"
                 className="w-full h-auto object-cover rounded-xl"
               />
             </div>

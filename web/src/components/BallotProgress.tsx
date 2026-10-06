@@ -13,11 +13,6 @@ interface BallotProgressProps {
   onClear: () => void;
   saveStatus?: SaveStatus;
   displayName?: string;
-  score?: {
-    correct: number;
-    evaluated: number;
-    percentage: number;
-  };
 }
 
 export const BallotProgress: React.FC<BallotProgressProps> = ({
@@ -28,8 +23,7 @@ export const BallotProgress: React.FC<BallotProgressProps> = ({
   progressPercentage,
   onClear,
   saveStatus = 'local',
-  displayName = 'Jogador',
-  score
+  displayName = 'Jogador'
 }) => {
   const [shareOpen, setShareOpen] = useState(false);
 
@@ -44,7 +38,7 @@ export const BallotProgress: React.FC<BallotProgressProps> = ({
         );
       case 'saved':
         return (
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" title="Palpites sincronizados com seu login na nuvem">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" title="Escolhas sincronizadas com seu login na nuvem">
             <CheckCircle2 className="w-3 h-3" />
             Salvo na nuvem
           </span>
@@ -59,7 +53,7 @@ export const BallotProgress: React.FC<BallotProgressProps> = ({
       case 'local':
       default:
         return (
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-slate-800 text-slate-400 border border-slate-700" title="Salvo no navegador. Entre para sincronizar entre dispositivos e figurar no ranking!">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-slate-800 text-slate-400 border border-slate-700" title="Salvo no navegador. Entre para sincronizar entre dispositivos e guardar suas escolhas!">
             <HardDrive className="w-3 h-3" />
             Salvo no navegador
           </span>
@@ -77,7 +71,7 @@ export const BallotProgress: React.FC<BallotProgressProps> = ({
               <div className="flex items-center gap-2">
                 <span className="text-sm font-semibold text-slate-200 flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-amber-400" />
-                  Progresso do seu Bolão
+                  Sua seleção do ano
                 </span>
                 {renderSaveBadge()}
               </div>
@@ -112,7 +106,7 @@ export const BallotProgress: React.FC<BallotProgressProps> = ({
                   onClear();
                 }
               }}
-              disabled={totalVoted === 0}
+              disabled={totalVoted === 0 || edition.status === 'locked'}
               className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-800/80 hover:bg-rose-500/20 hover:text-rose-300 text-slate-300 border border-slate-700/80 transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               title="Limpar votos deste ano"
             >
@@ -131,7 +125,6 @@ export const BallotProgress: React.FC<BallotProgressProps> = ({
         displayName={displayName}
         totalVoted={totalVoted}
         totalCategories={totalCategories}
-        score={score}
       />
     </>
   );

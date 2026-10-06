@@ -9,13 +9,12 @@ import { AuthButton } from './components/AuthButton';
 import { CategoryCard } from './components/CategoryCard';
 import { BallotProgress } from './components/BallotProgress';
 import { StatsView } from './components/StatsView';
-import { LeaderboardView } from './components/LeaderboardView';
 import { Search, Loader2, Trophy, Flame, Eye, EyeOff } from 'lucide-react';
 
-function getInitialTab(): 'ballot' | 'stats' | 'leaderboard' {
+function getInitialTab(): 'ballot' | 'stats' {
   const params = new URLSearchParams(window.location.search);
   const tab = params.get('tab');
-  if (tab === 'stats' || tab === 'leaderboard' || tab === 'ballot') {
+  if (tab === 'stats' || tab === 'ballot') {
     return tab;
   }
   return 'ballot';
@@ -45,15 +44,19 @@ export const App: React.FC = () => {
     totalVoted,
     totalCategories,
     progressPercentage,
-    score,
     syncing,
     syncError,
     saveStatus
   } = useBallot(activeEdition, user);
 
-  const [activeTab, setActiveTab] = useState<'ballot' | 'stats' | 'leaderboard'>(getInitialTab);
+  const [activeTab, setActiveTab] = useState<'ballot' | 'stats'>(getInitialTab);
   const [searchQuery, setSearchQuery] = useState('');
   const [revealAllSpoilers, setRevealAllSpoilers] = useState(false);
+
+  React.useEffect(() => {
+    setRevealAllSpoilers(false);
+    setSearchQuery('');
+  }, [selectedYear]);
 
   // Sync year and tab in URL
   React.useEffect(() => {
@@ -115,22 +118,18 @@ export const App: React.FC = () => {
         ) : currentEdition ? (
           <div>
             {/* Hero Header */}
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 rounded-3xl border border-violet-500/20 bg-gradient-to-br from-violet-500/10 via-slate-900/60 to-amber-500/5 px-5 py-10 sm:py-14">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-3">
                 <Flame className="w-3.5 h-3.5 text-amber-400" />
                 The Game Awards {currentEdition.year}
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-cinzel tracking-tight">
-                {currentEdition.title}
+                O prêmio é seu.
               </h1>
               <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto mt-2">
-                {activeEdition?.status === 'locked'
-                  ? 'A cerimônia está acontecendo agora! Votação congelada.'
-                  : activeEdition?.status === 'concluded' && activeEdition.year < 2026
-                  ? `Bolão Retrospectivo: escolha seus favoritos de ${activeEdition.year}!`
-                  : activeEdition?.status === 'concluded'
-                  ? 'A cerimônia já aconteceu! Confira seus acertos comparados aos vencedores oficiais.'
-                  : 'Faça suas escolhas para cada uma das categorias e salve seus palpites.'}
+                Quem merecia levar o troféu em {currentEdition.year}? Escolha os jogos que marcaram
+                o seu ano e monte sua própria edição do The Game Awards.
+
               </p>
               <div className="mt-4 flex flex-col items-center gap-2">
                 <AuthButton
@@ -142,16 +141,17 @@ export const App: React.FC = () => {
                   onSignOut={signOut}
                 />
                 {configured && !user && (
-                  <p className="text-xs text-slate-500">Entre para sincronizar seus palpites entre dispositivos.</p>
+                  <p className="text-xs text-slate-500">Entre para sincronizar seus escolhas entre dispositivos.</p>
                 )}
-                {user && syncing && <p className="text-xs text-slate-500">Sincronizando palpites...</p>}
+                {user && syncing && <p className="text-xs text-slate-500">Sincronizando escolhas...</p>}
                 {syncError && <p className="text-xs text-rose-300">{syncError}</p>}
               </div>
             </div>
 
-            {/* TAB: Meu Bolão */}
+            {/* Personal favorites */}
             {activeTab === 'ballot' && (
               <div className="space-y-6">
+                {activeEdition?.status === 'locked' && <p className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-200">As escolhas desta edição estão pausadas durante a cerimônia. Você poderá selecionar seus favoritos quando ela terminar.</p>}
                 {/* Progress Bar & Actions */}
                 <BallotProgress
                   edition={activeEdition!}
@@ -162,7 +162,6 @@ export const App: React.FC = () => {
                   onClear={clearVotes}
                   saveStatus={saveStatus}
                   displayName={profile?.displayName || user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email?.split('@')[0] || 'Jogador'}
-                  score={score}
                 />
 
                 {/* Search Bar & Spoiler Toggle */}
@@ -188,12 +187,12 @@ export const App: React.FC = () => {
                         {revealAllSpoilers ? (
                           <>
                             <EyeOff className="w-3.5 h-3.5 text-amber-400" />
-                            Modo Anti-Spoiler (Ocultar Vencedores)
+                            Ocultar resultado oficial
                           </>
                         ) : (
                           <>
                             <Eye className="w-3.5 h-3.5 text-amber-400" />
-                            Revelar Todos os Vencedores
+                            Mostrar resultado oficial
                           </>
                         )}
                       </button>
@@ -228,7 +227,7 @@ export const App: React.FC = () => {
                           </p>
                           <div className="pt-2 border-t border-slate-800/80">
                             <p className="text-xs text-amber-400 font-medium">
-                              💡 Enquanto isso, experimente o Modo Retrospectivo navegando pelas edições anteriores (2014 a 2025) no seletor de anos acima!
+                              💡 Enquanto isso, experimente o suas escolhas navegando pelas edições anteriores (2014 a 2025) no seletor de anos acima!
                             </p>
                           </div>
                         </div>
@@ -248,19 +247,10 @@ export const App: React.FC = () => {
               <StatsView
                 edition={activeEdition!}
                 votes={votes}
-                totalVoted={totalVoted}
-                score={score}
               />
             )}
 
-            {/* TAB: Classificação (Leaderboard) */}
-            {activeTab === 'leaderboard' && (
-              <LeaderboardView
-                year={activeEdition!.year}
-                status={activeEdition?.status}
-                currentUserId={user?.id}
-              />
-            )}
+
           </div>
         ) : null}
       </main>
@@ -271,7 +261,7 @@ export const App: React.FC = () => {
           <div className="flex items-center gap-2">
             <Trophy className="w-4 h-4 text-amber-500" />
             <span className="font-semibold text-slate-400">GOTY Picks</span>
-            <span>— Bolão comunitário do The Game Awards</span>
+            <span>— Seus favoritos do The Game Awards</span>
           </div>
           <div>
             Dados extraídos via Wikipedia • Desenvolvido com Vite & React

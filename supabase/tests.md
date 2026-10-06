@@ -1,3 +1,5 @@
+> Estado atualizado: as suites automatizadas e os comandos de execucao estao em [TESTING.md](../TESTING.md). O diagnostico abaixo foi escrito antes da implementacao e serve como roadmap historico.
+
 # Diagnóstico e Plano de Testes — Supabase & Banco de Dados (`supabase/`) 🗄️
 
 Este documento mapeia o estado atual de testes do banco de dados relacional PostgreSQL, das regras de segurança de nível de linha (RLS), das funções de agregação (RPC) e das Edge Functions do Supabase.

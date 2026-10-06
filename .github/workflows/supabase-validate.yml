@@ -23,6 +23,8 @@ jobs:
         run: supabase start
       - name: Rebuild from migrations and seed
         run: supabase db reset
+      - name: Run database tests
+        run: supabase test db
       - name: Stop local Supabase
         if: always()
         run: supabase stop

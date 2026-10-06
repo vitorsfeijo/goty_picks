@@ -6,11 +6,6 @@ interface GenerateCardOptions {
   displayName: string;
   totalVoted: number;
   totalCategories: number;
-  score?: {
-    correct: number;
-    evaluated: number;
-    percentage: number;
-  };
 }
 
 /**
@@ -45,7 +40,7 @@ function wrapText(
 export async function generateBallotCanvas(
   options: GenerateCardOptions
 ): Promise<HTMLCanvasElement> {
-  const { edition, votes, displayName, totalVoted, totalCategories, score } = options;
+  const { edition, votes, displayName, totalVoted, totalCategories } = options;
 
   const canvas = document.createElement('canvas');
   canvas.width = 1080;
@@ -95,13 +90,10 @@ export async function generateBallotCanvas(
   // Player Name & Progress Badge
   ctx.font = '500 24px "Inter", sans-serif';
   ctx.fillStyle = '#94a3b8';
-  ctx.fillText(`Palpites oficiais de ${displayName}`, 540, 230);
+  ctx.fillText(`Os favoritos de ${displayName}`, 540, 230);
 
   // Progress Pill
-  const isConcluded = edition.status === 'concluded' && (score?.evaluated ?? 0) > 0;
-  const pillText = isConcluded
-    ? `⭐ Aproveitamento: ${score?.percentage}% (${score?.correct}/${score?.evaluated} acertos)`
-    : `Progresso: ${totalVoted} de ${totalCategories} categorias (${totalCategories > 0 ? Math.round((totalVoted / totalCategories) * 100) : 0}%)`;
+  const pillText = `${totalVoted} de ${totalCategories} categorias com a minha escolha`;
 
   ctx.fillStyle = 'rgba(245, 158, 11, 0.12)';
   ctx.strokeStyle = 'rgba(245, 158, 11, 0.4)';
@@ -137,7 +129,7 @@ export async function generateBallotCanvas(
 
   ctx.font = 'bold 18px "Inter", sans-serif';
   ctx.fillStyle = '#f59e0b';
-  ctx.fillText('★  MEU PALPITE PARA JOGO DO ANO (GOTY)  ★', 540, gotyBoxY + 38);
+  ctx.fillText('★  MEU JOGO DO ANO  ★', 540, gotyBoxY + 38);
 
   ctx.font = 'bold 36px "Cinzel", "Inter", sans-serif';
   ctx.fillStyle = gotyNominee ? '#ffffff' : '#64748b';
@@ -170,14 +162,10 @@ export async function generateBallotCanvas(
 
     const voteId = votes[cat.id];
     const nominee = cat.nominees.find((n) => n.id === voteId);
-    const winnerId = cat.winner_id || cat.nominees.find((n) => n.winner)?.id;
-    const isWinner = Boolean(winnerId && winnerId === voteId);
 
     // Card background
     ctx.fillStyle = 'rgba(15, 23, 42, 0.75)';
-    ctx.strokeStyle = isWinner
-      ? 'rgba(52, 211, 153, 0.5)'
-      : nominee
+    ctx.strokeStyle = nominee
       ? 'rgba(51, 65, 85, 0.8)'
       : 'rgba(30, 41, 59, 0.5)';
     ctx.lineWidth = 1.5;
@@ -189,7 +177,7 @@ export async function generateBallotCanvas(
     // Category Title
     ctx.textAlign = 'left';
     ctx.font = '600 16px "Inter", sans-serif';
-    ctx.fillStyle = isWinner ? '#34d399' : '#f59e0b';
+    ctx.fillStyle = '#f59e0b';
     const cleanTitle = cat.title.length > 34 ? `${cat.title.slice(0, 32)}...` : cat.title;
     ctx.fillText(cleanTitle, x + 20, y + 32);
 
@@ -218,7 +206,7 @@ export async function generateBallotCanvas(
   ctx.textAlign = 'center';
   ctx.font = '600 20px "Inter", sans-serif';
   ctx.fillStyle = '#94a3b8';
-  ctx.fillText('Faça seus palpites e compare com seus amigos:', 540, footerY + 45);
+  ctx.fillText('Quem merecia ganhar? Compartilhe suas escolhas:', 540, footerY + 45);
 
   ctx.font = 'bold 26px "Cinzel", "Inter", sans-serif';
   ctx.fillStyle = '#f59e0b';
@@ -267,8 +255,8 @@ export async function shareBallotCard(
       ) {
         try {
           await navigator.share({
-            title: `Meus Palpites - ${options.edition.title}`,
-            text: `Confira meus palpites para o ${options.edition.title} no GOTY Picks!`,
+            title: `Meus favoritos - ${options.edition.title}`,
+            text: `Confira meus favoritos do ${options.edition.title} no GOTY Picks!`,
             files: [file]
           });
           resolve(true);

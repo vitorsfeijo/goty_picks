@@ -109,12 +109,10 @@ local. No projeto hospedado:
    - `http://localhost:3000`
    - a URL final do GitHub Pages (ex: `https://vitorsfeijo.github.io/goty_picks/`)
 
-### Edge Functions (future work)
+### Edge Functions
 
-O diretório `supabase/functions/` está reservado para Edge Functions conforme
-a [arquitetura](ARCHITECTURE.md). Nenhuma função está implementada ainda. Veja
-[supabase/functions/README.md](supabase/functions/README.md) para ideias de
-implementações futuras e instruções de criação.
+A funcao `sync-edition-results` sincroniza o estado da edicao e os vencedores.
+Veja [a documentacao do endpoint](supabase/functions/sync-edition-results/README.md).
 
 ## Executar o scraper
 
@@ -184,3 +182,8 @@ goty-picks/
 - [Scraper](scraper/README.md)
 - [Frontend](web/README.md)
 - [Backend Supabase](supabase/README.md)
+
+## Testes da web e backend
+
+Veja [TESTING.md](TESTING.md) para executar as suites Vitest e pgTAP,
+gerar cobertura e entender os checks de CI.

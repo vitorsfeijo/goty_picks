@@ -6,8 +6,8 @@ interface NavbarProps {
   editions: EditionSummary[];
   selectedYear: number | null;
   onSelectYear: (year: number) => void;
-  activeTab: 'ballot' | 'stats' | 'leaderboard';
-  onSelectTab: (tab: 'ballot' | 'stats' | 'leaderboard') => void;
+  activeTab: 'ballot' | 'stats';
+  onSelectTab: (tab: 'ballot' | 'stats') => void;
   totalVoted: number;
   totalCategories: number;
   status?: EditionStatus;
@@ -80,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 {getStatusBadge(status)}
               </div>
               <p className="text-xs text-slate-400 hidden sm:block">
-                O Bolão do The Game Awards
+                O seu olhar sobre cada edição
               </p>
             </div>
           </div>
@@ -91,6 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="relative flex items-center bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-sm">
               <Calendar className="w-4 h-4 text-amber-400 mr-2" />
               <select
+                aria-label="Edição do The Game Awards"
                 value={selectedYear || ''}
                 onChange={(e) => onSelectYear(Number(e.target.value))}
                 className="bg-transparent text-slate-200 font-semibold focus:outline-none cursor-pointer pr-1"
@@ -107,7 +108,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-300">
               <CheckSquare className="w-3.5 h-3.5 text-amber-400" />
               <span>
-                <strong className="text-amber-400">{totalVoted}</strong> / {totalCategories} votados
+                <strong className="text-amber-400">{totalVoted}</strong> / {totalCategories} escolhidos
               </span>
             </div>
           </div>
@@ -124,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
           >
             <CheckSquare className="w-4 h-4" />
-            Meu Bolão (Palpites)
+            Minhas escolhas
           </button>
 
           <button
@@ -136,20 +137,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
           >
             <BarChart3 className="w-4 h-4" />
-            Estatísticas & Vencedores
+            Comunidade
           </button>
 
-          <button
-            onClick={() => onSelectTab('leaderboard')}
-            className={`flex items-center gap-2 py-3 px-1 text-sm font-medium border-b-2 transition-all whitespace-nowrap ${
-              activeTab === 'leaderboard'
-                ? 'border-amber-400 text-amber-400'
-                : 'border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-700'
-            }`}
-          >
-            <Trophy className="w-4 h-4" />
-            Classificação (Leaderboard)
-          </button>
+
         </div>
       </div>
     </header>

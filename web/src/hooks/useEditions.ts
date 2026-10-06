@@ -25,7 +25,8 @@ export function useEditions() {
           const params = new URLSearchParams(window.location.search);
           const urlYear = Number(params.get('year'));
           const found = data.find((e) => e.year === urlYear);
-          setSelectedYear(found ? found.year : data[0].year);
+          const latestRetrospective = [...data].sort((a, b) => b.year - a.year).find(e => e.status === 'concluded' && e.categories_count > 0);
+          setSelectedYear(found ? found.year : (latestRetrospective ?? data[0]).year);
         }
       } catch (err: any) {
         console.error('Error loading editions:', err);

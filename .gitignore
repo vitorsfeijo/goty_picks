@@ -43,3 +43,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+
+goty_picks.code-workspace
+# Test coverage
+web/coverage/

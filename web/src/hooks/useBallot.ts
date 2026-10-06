@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import type { User } from '@supabase/supabase-js';
 import { supabase } from '../lib/supabase';
 import { Edition, UserVotes } from '../types';
@@ -49,7 +49,7 @@ export function useBallot(edition: Edition | null, user: User | null) {
         if (!active) return;
         if (error) {
           setSyncing(false);
-          setSyncError('Não foi possível carregar seus palpites salvos.');
+          setSyncError('Não foi possível carregar seus escolhas salvos.');
           setVotes(localVotes);
           setSaveStatus('error');
           return;
@@ -135,7 +135,7 @@ export function useBallot(edition: Edition | null, user: User | null) {
       setVotes(previous);
       try { localStorage.setItem(storageKey, JSON.stringify(previous)); }
       catch {}
-      setSyncError(error.message.includes('row-level security') ? 'Este bolão não está aceitando palpites no momento.' : 'Não foi possível salvar seu palpite.');
+      setSyncError(error.message.includes('row-level security') ? 'Esta edição não está aceitando escolhas no momento.' : 'Não foi possível salvar seu escolha.');
       setSaveStatus('error');
     } else {
       setSaveStatus('saved');
@@ -167,7 +167,7 @@ export function useBallot(edition: Edition | null, user: User | null) {
       setVotes(previous);
       try { localStorage.setItem(storageKey, JSON.stringify(previous)); }
       catch {}
-      setSyncError('Não foi possível limpar seus palpites.');
+      setSyncError('Não foi possível limpar seus escolhas.');
       setSaveStatus('error');
     } else {
       setSaveStatus('saved');
@@ -177,19 +177,6 @@ export function useBallot(edition: Edition | null, user: User | null) {
   const totalCategories = edition?.categories.length || 0;
   const totalVoted = Object.keys(votes).length;
   const progressPercentage = totalCategories > 0 ? Math.round((totalVoted / totalCategories) * 100) : 0;
-  const score = useMemo(() => {
-    if (!edition?.categories) return { correct: 0, evaluated: 0, total: 0, percentage: 0 };
-    let correct = 0;
-    let evaluated = 0;
-    for (const category of edition.categories) {
-      const winnerId = category.winner_id || category.nominees.find((n) => n.winner)?.id;
-      if (winnerId) {
-        evaluated++;
-        if (votes[category.id] === winnerId) correct++;
-      }
-    }
-    return { correct, evaluated, total: totalCategories, percentage: evaluated > 0 ? Math.round((correct / evaluated) * 100) : 0 };
-  }, [edition, votes, totalCategories]);
 
-  return { votes, setVote, clearVotes, totalVoted, totalCategories, progressPercentage, score, syncing, syncError, saveStatus };
+  return { votes, setVote, clearVotes, totalVoted, totalCategories, progressPercentage, syncing, syncError, saveStatus };
 }

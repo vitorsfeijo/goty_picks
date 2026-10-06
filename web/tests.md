@@ -1,3 +1,5 @@
+> Estado atualizado: as suites automatizadas e os comandos de execucao estao em [TESTING.md](../TESTING.md). O diagnostico abaixo foi escrito antes da implementacao e serve como roadmap historico.
+
 # Diagnóstico e Plano de Testes — Frontend Web (`web/`) 🌐
 
 Este documento mapeia o estado atual de testes no frontend, os riscos associados à falta de cobertura e o roadmap para implementação de testes unitários, de componentes e de sistema (E2E).
