@@ -31,16 +31,31 @@ set local role authenticated;
 select set_config('request.jwt.claim.sub', '00000000-0000-0000-0000-000000000001', true);
 select is((select count(*) from votes where year = 2090), 1::bigint, 'Open ballots expose only own votes');
 select lives_ok($$update profiles set display_name = 'Alice updated' where id = auth.uid()$$, 'Can update own profile');
-select is((with changed as (update profiles set display_name = 'Hacked' where id = '00000000-0000-0000-0000-000000000002' returning id) select count(*) from changed), 0::bigint, 'Cannot update another profile');
+with changed as (
+  update profiles set display_name = 'Hacked' where id = '00000000-0000-0000-0000-000000000002' returning id
+)
+select is(count(*), 0::bigint, 'Cannot update another profile') from changed;
 select lives_ok($$insert into votes (user_id, year, category_id, nominee_id) values (auth.uid(), 2090, 'art', 'beta')$$, 'Can insert own open vote');
 select throws_ok($$insert into votes (user_id, year, category_id, nominee_id) values ('00000000-0000-0000-0000-000000000002', 2090, 'art', 'beta')$$, '42501', null, 'Cannot insert another player vote');
-select is((with changed as (update votes set nominee_id = 'hacked' where year = 2090 and user_id = '00000000-0000-0000-0000-000000000002' returning id) select count(*) from changed), 0::bigint, 'Cannot update another ballot');
-select is((with changed as (delete from votes where year = 2090 and user_id = '00000000-0000-0000-0000-000000000002' returning id) select count(*) from changed), 0::bigint, 'Cannot delete another ballot');
+with changed as (
+  update votes set nominee_id = 'hacked' where year = 2090 and user_id = '00000000-0000-0000-0000-000000000002' returning id
+)
+select is(count(*), 0::bigint, 'Cannot update another ballot') from changed;
+with changed as (
+  delete from votes where year = 2090 and user_id = '00000000-0000-0000-0000-000000000002' returning id
+)
+select is(count(*), 0::bigint, 'Cannot delete another ballot') from changed;
 select throws_ok($$insert into votes (user_id, year, category_id, nominee_id) values (auth.uid(), 2091, 'goty', 'alpha')$$, '42501', null, 'Expired open edition rejects votes');
 select throws_ok($$insert into votes (user_id, year, category_id, nominee_id) values (auth.uid(), 2092, 'goty', 'alpha')$$, '42501', null, 'Locked edition rejects votes');
 select is((select count(*) from votes where year = 2092), 2::bigint, 'Locked ballots are public to authenticated users');
-select is((with changed as (update votes set nominee_id = 'hacked' where year = 2092 and user_id = auth.uid() returning id) select count(*) from changed), 0::bigint, 'Cannot update own locked ballot');
-select is((with changed as (delete from votes where year = 2092 and user_id = auth.uid() returning id) select count(*) from changed), 0::bigint, 'Cannot delete own locked ballot');
+with changed as (
+  update votes set nominee_id = 'hacked' where year = 2092 and user_id = auth.uid() returning id
+)
+select is(count(*), 0::bigint, 'Cannot update own locked ballot') from changed;
+with changed as (
+  delete from votes where year = 2092 and user_id = auth.uid() returning id
+)
+select is(count(*), 0::bigint, 'Cannot delete own locked ballot') from changed;
 select lives_ok($$insert into votes (user_id, year, category_id, nominee_id) values (auth.uid(), 2093, 'retrospective', 'alpha')$$, 'Concluded edition permits retrospective votes');
 select lives_ok($$delete from votes where year = 2093 and category_id = 'retrospective'$$, 'Can clear retrospective vote');
 select throws_ok($$select * from get_community_votes_distribution(2090)$$, 'P0001', 'Community ballot data is unavailable until this edition is locked', 'Distribution hidden while open');
