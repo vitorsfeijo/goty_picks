@@ -6,8 +6,8 @@ interface NavbarProps {
   editions: EditionSummary[];
   selectedYear: number | null;
   onSelectYear: (year: number) => void;
-  activeTab: 'ballot' | 'stats';
-  onSelectTab: (tab: 'ballot' | 'stats') => void;
+  activeTab: 'ballot' | 'stats' | 'goty';
+  onSelectTab: (tab: 'ballot' | 'stats' | 'goty') => void;
   totalVoted: number;
   totalCategories: number;
   status?: EditionStatus;
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span className="font-cinzel text-lg sm:text-xl font-bold tracking-wider text-slate-100">
                   GOTY <span className="text-amber-400">PICKS</span>
                 </span>
-                {getStatusBadge(status)}
+                {activeTab !== 'goty' && getStatusBadge(status)}
               </div>
               <p className="text-xs text-slate-400 hidden sm:block">
                 O seu olhar sobre cada edição
@@ -87,6 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Year Selector & Progress Pill */}
           <div className="flex items-center gap-3 sm:gap-4">
+            {activeTab === 'goty' ? <span className="rounded-lg border border-violet-500/20 bg-violet-500/10 px-3 py-2 text-xs text-violet-300">Todos os anos</span> : <>
             {/* Year Selector Dropdown */}
             <div className="relative flex items-center bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-sm">
               <Calendar className="w-4 h-4 text-amber-400 mr-2" />
@@ -111,6 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <strong className="text-amber-400">{totalVoted}</strong> / {totalCategories} escolhidos
               </span>
             </div>
+            </>}
           </div>
         </div>
 
@@ -138,6 +140,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <BarChart3 className="w-4 h-4" />
             Comunidade
+          </button>
+          <button onClick={() => onSelectTab('goty')}
+            className={`flex items-center gap-2 py-3 px-1 text-sm font-medium border-b-2 transition-all whitespace-nowrap ${activeTab === 'goty' ? 'border-amber-400 text-amber-400' : 'border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-700'}`}>
+            <Trophy className="w-4 h-4" />Jogo do Ano
           </button>
 
 

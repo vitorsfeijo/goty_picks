@@ -9,12 +9,13 @@ import { AuthButton } from './components/AuthButton';
 import { CategoryCard } from './components/CategoryCard';
 import { BallotProgress } from './components/BallotProgress';
 import { StatsView } from './components/StatsView';
+import { GotyStatsView } from './components/GotyStatsView';
 import { Search, Loader2, Trophy, Flame, Eye, EyeOff } from 'lucide-react';
 
-function getInitialTab(): 'ballot' | 'stats' {
+function getInitialTab(): 'ballot' | 'stats' | 'goty' {
   const params = new URLSearchParams(window.location.search);
   const tab = params.get('tab');
-  if (tab === 'stats' || tab === 'ballot') {
+  if (tab === 'stats' || tab === 'ballot' || tab === 'goty') {
     return tab;
   }
   return 'ballot';
@@ -49,7 +50,7 @@ export const App: React.FC = () => {
     saveStatus
   } = useBallot(activeEdition, user);
 
-  const [activeTab, setActiveTab] = useState<'ballot' | 'stats'>(getInitialTab);
+  const [activeTab, setActiveTab] = useState<'ballot' | 'stats' | 'goty'>(getInitialTab);
   const [searchQuery, setSearchQuery] = useState('');
   const [revealAllSpoilers, setRevealAllSpoilers] = useState(false);
 
@@ -97,7 +98,9 @@ export const App: React.FC = () => {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {loading ? (
+        {activeTab === 'goty' ? (
+          <GotyStatsView editions={editions} onChooseYear={year => { setSelectedYear(year); setActiveTab('ballot'); }} />
+        ) : loading ? (
           <div className="flex flex-col items-center justify-center py-32 space-y-4">
             <Loader2 className="w-10 h-10 text-amber-400 animate-spin" />
             <p className="text-slate-400 text-sm font-medium">
@@ -141,7 +144,7 @@ export const App: React.FC = () => {
                   onSignOut={signOut}
                 />
                 {configured && !user && (
-                  <p className="text-xs text-slate-500">Entre para sincronizar seus escolhas entre dispositivos.</p>
+                  <p className="text-xs text-slate-500">Entre para sincronizar suas escolhas entre dispositivos.</p>
                 )}
                 {user && syncing && <p className="text-xs text-slate-500">Sincronizando escolhas...</p>}
                 {syncError && <p className="text-xs text-rose-300">{syncError}</p>}
@@ -227,7 +230,7 @@ export const App: React.FC = () => {
                           </p>
                           <div className="pt-2 border-t border-slate-800/80">
                             <p className="text-xs text-amber-400 font-medium">
-                              💡 Enquanto isso, experimente o suas escolhas navegando pelas edições anteriores (2014 a 2025) no seletor de anos acima!
+                              💡 Enquanto isso, escolha seus favoritos nas edições anteriores no seletor de anos acima!
                             </p>
                           </div>
                         </div>
